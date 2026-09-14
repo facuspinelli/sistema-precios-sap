@@ -15,11 +15,13 @@ import {
   ResumenAnalisis,
 } from "../lib/analisis";
 
-type Vista = "inicio" | "cargar";
+type Vista = "inicio" | "cargar" | "consulta";
 
 export default function Home() {
   const [vista, setVista] =
     useState<Vista>("inicio");
+  const [vistaConsulta, setVistaConsulta] =
+  useState(false);
 
   const [archivo, setArchivo] =
     useState("");
