@@ -153,17 +153,20 @@ export function validarFila(
    * ==============================
    */
 
-  const condicionesEncontradas = [
-    ...new Set(
-      reglasCliente
-        .map((regla: any) =>
-          normalizar(
-            regla.condicion_impositiva
-          )
-        )
-        .filter(Boolean)
-    )
-  ];
+  const condicionesEncontradas: string[] = [];
+
+for (const regla of reglasCliente) {
+  const condicion = normalizar(
+    (regla as any).condicion_impositiva
+  );
+
+  if (
+    condicion &&
+    condicionesEncontradas.indexOf(condicion) === -1
+  ) {
+    condicionesEncontradas.push(condicion);
+  }
+}
 
   const condicionEsperada =
     condicionesEncontradas.length === 1
