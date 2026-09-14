@@ -108,7 +108,7 @@ export default function Home() {
 
         <div className="brand">
           <img
-            src="/Addoc_color_RGB (11)(1).png"
+            src="/logo-addoc.png"
             alt="ADDOC"
           />
 
