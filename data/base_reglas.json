@@ -1,3 +1,4749 @@
 {
-  "reglas": []
+  "reglas": [
+    {
+      "cod_sap": "483",
+      "razon_social": "AMX AR S/A/",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "484",
+      "razon_social": "FUNDALEU FUNDACION P/COMB",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "485",
+      "razon_social": "ASOCIACION CIVIL MATER DE",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "486",
+      "razon_social": "FAST FOOD SUDAMERICANA S.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "487",
+      "razon_social": "LOS CIPRESES SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "488",
+      "razon_social": "HOSPITAL ITALIANO",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "489",
+      "razon_social": "RECKITT BENCKISER AR SOCI",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "490",
+      "razon_social": "CTI NORTE CIA DE TELEFONO (MAL CREADO)",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "491",
+      "razon_social": "MMS COMUNICACIONES AR S.R",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "492",
+      "razon_social": "TRANSCLOR S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "493",
+      "razon_social": "UNITED BROKERS S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "494",
+      "razon_social": "SEGURCOOP COOP.DE SEGUROS",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "495",
+      "razon_social": "ADECCO AR S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "496",
+      "razon_social": "NEPHROLOGY S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "497",
+      "razon_social": "RENAULT AR S.A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1260",
+      "razon_social": "NICART S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "498",
+      "razon_social": "CÍRCULO MÉDICO LA MATANZA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "499",
+      "razon_social": "ASOCIACION DE COOP.ARS S.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "500",
+      "razon_social": "ELISABEL S.R.L.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "501",
+      "razon_social": "HOSPITAL BRITANICO DE BS AS ASOC.CIVIL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "502",
+      "razon_social": "DEBURSA AL C Y S A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "503",
+      "razon_social": "COOP.DE VIVIENDA  CREDITO Y CONSUMO DEL OESTE LTDA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "504",
+      "razon_social": "KASDORF",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "505",
+      "razon_social": "SANOFI-AVENTIS AR SOCIEDA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "506",
+      "razon_social": "HIDROVIA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "507",
+      "razon_social": "LA MERIDIONAL CIA ARG. DE",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "508",
+      "razon_social": "BUREAU VERITAS AR S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "509",
+      "razon_social": "JABLONKA S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "510",
+      "razon_social": "AIR LIQUIDE AR (CENTRAL)",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "511",
+      "razon_social": "PCFG ADVISORY S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "512",
+      "razon_social": "SOCIEDAD MILITAR SEGURO D",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "513",
+      "razon_social": "ICBC (AR) SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "514",
+      "razon_social": "BANCO DEL CHUBUT S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "515",
+      "razon_social": "FEDERACION DE EDUCADORES",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "516",
+      "razon_social": "TCC LEASING S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "517",
+      "razon_social": "EL DIA S.A.C.Y.F.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "518",
+      "razon_social": "TOTAL ESPECIALIDADES AR S",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "519",
+      "razon_social": "BANK OF AMERICA N.A (BOFA)",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "520",
+      "razon_social": "CGC ENERGIA S.A.U.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "521",
+      "razon_social": "FUNDACION ICBC",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "522",
+      "razon_social": "ADMINISTRACION DE CARDIOL",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1369",
+      "razon_social": "Cardio Ital Asociacion Civil",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "523",
+      "razon_social": "LABORATORIO INTERNACIONAL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "524",
+      "razon_social": "SONY MUSIC ENTERTAINMENT",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "525",
+      "razon_social": "ESTUDIO MOLTEDO",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "526",
+      "razon_social": "BANCO CREDICOOP COOPERATI",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "527",
+      "razon_social": "ASOC. PROTEC.OBTENCION DE",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "528",
+      "razon_social": "DIR. GENERAL DE PROG. Y PROYECTO",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "529",
+      "razon_social": "PROGRAMA DE LAS NACIONES UNIDAS PARA EL DESARROLLO (PNUD)",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "530",
+      "razon_social": "MIRCOLI ANDREA VIVIANA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "531",
+      "razon_social": "BANCO SANTANDER RIO SOCIE",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "532",
+      "razon_social": "MEDITERRANEAN SHIPPING CO",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "533",
+      "razon_social": "MONROE AMERICANA S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "534",
+      "razon_social": "BANCO BBVA ARGENTINA S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "535",
+      "razon_social": "BANCO PLATENSE SA. S/QUIE",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1261",
+      "razon_social": "BANCO FINANSUR S.A. (MEDE",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "536",
+      "razon_social": "TELECOM AR SOCIEDAD ANONI",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1262",
+      "razon_social": "MACRO VALORES SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "537",
+      "razon_social": "OMINT S.A DE SERVICIOS",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "538",
+      "razon_social": "OSPECON OBRA SOCIAL DEL P",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "539",
+      "razon_social": "UNION OBRERA DE LA CONST.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "540",
+      "razon_social": "GENERAL ELECTRIC INTERNAT",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "541",
+      "razon_social": "OSDE ORGANIZACION DE SERV",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "542",
+      "razon_social": "BANCO PATAGONIA S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1263",
+      "razon_social": "DIRECCION NACIONAL DE VIA",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "543",
+      "razon_social": "DYCASA SOCIEDAD ANONIMA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "544",
+      "razon_social": "CORREO OFICIAL DE LA REP.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "545",
+      "razon_social": "SGS AR S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "546",
+      "razon_social": "CRAVERI S.A.I.C.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "547",
+      "razon_social": "CONSEJO PROF.CIENCIAS ECO",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "548",
+      "razon_social": "BANCO SUPERVIELLE S.A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "549",
+      "razon_social": "LIFE SEGUROS DE PERSONAS Y PATRIMONIALES S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "550",
+      "razon_social": "Y.P.F. SOCIEDAD ANONIMA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "551",
+      "razon_social": "MERNO S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "552",
+      "razon_social": "OPERADORA DE ESTACIONES D",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "553",
+      "razon_social": "STOLT NIELSEN AR S.A.U",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "554",
+      "razon_social": "PILAGA S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "555",
+      "razon_social": "DRAGADOS S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "556",
+      "razon_social": "YPF GAS SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "557",
+      "razon_social": "BANCO ITAU ARGENTINA S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "558",
+      "razon_social": "COMPAÑIA DE ALIMENTOS FA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "559",
+      "razon_social": "MOLINOS S.A. (bloqueado)",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1347",
+      "razon_social": "Molinos Rio de la Plata SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "560",
+      "razon_social": "TOTAL AUSTRAL S.A. SUC.AR",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "561",
+      "razon_social": "ANSELMI CLAIMS MANAGEMENT",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "562",
+      "razon_social": "LABORATORIO ELEA PHOENIX",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "563",
+      "razon_social": "BEMALAL S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "564",
+      "razon_social": "IMAGEN SATELITAL SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "565",
+      "razon_social": "BANCO VOII S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "566",
+      "razon_social": "ESTANCIAS BELLAMAR S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "567",
+      "razon_social": "BANCO CIUDAD DE 01",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "568",
+      "razon_social": "HSBC BANK AR S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "569",
+      "razon_social": "TH S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "570",
+      "razon_social": "PRUDENTIAL SEGUROS S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "571",
+      "razon_social": "CONSTANTIN CONSULTORA S.A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "572",
+      "razon_social": "BANCO MACRO SOCIEDAD ANON",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "573",
+      "razon_social": "FS PRINT & PROJECTS SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "574",
+      "razon_social": "OBRA SOCIAL DE PETROLEROS (OSPE)",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "575",
+      "razon_social": "DAP COOPERATIVA DE CREDIT",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "576",
+      "razon_social": "GAS NATURAL BAN S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1337",
+      "razon_social": "Gas Natural (PAGADOR)",
+      "condicion_impositiva": ""
+    },
+    {
+      "cod_sap": "577",
+      "razon_social": "AMC NETWORKS AR S.C.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "578",
+      "razon_social": "SOC IBERICA CONTRUCCIONES",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "579",
+      "razon_social": "BERKLEY INTERNATIONAL SEG",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1264",
+      "razon_social": "ISS FACILITY SERVICES SRL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "580",
+      "razon_social": "MACRO SECURITIES SA SOCIE",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "581",
+      "razon_social": "BHP CHILE INC",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "582",
+      "razon_social": "BERKLEY INTERNATIONAL AR",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "583",
+      "razon_social": "ECOHABITAT S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "584",
+      "razon_social": "MUNCHENER DE ARG. SERVICI",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "585",
+      "razon_social": "SWISS JUST LATINOAMERICAN",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "586",
+      "razon_social": "EGESAC SOC. ANONIMA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "587",
+      "razon_social": "FRIGOLAR S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "588",
+      "razon_social": "MERCEDES BENZ CÃA. FINAN",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "589",
+      "razon_social": "OBRA SOCIAL DEL PERSONAL",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "590",
+      "razon_social": "A-EVANGELISTA S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "591",
+      "razon_social": "UNION AR DE TRABAJADORES (uatre)",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "592",
+      "razon_social": "SWISS MEDICAL S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "593",
+      "razon_social": "PROSEGUR S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "594",
+      "razon_social": "AMBA ASOC. DE MARKETING B",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "595",
+      "razon_social": "AGRO CORTEVA ARGENTINA S.R.L.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "596",
+      "razon_social": "SOFTLAND AR S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "597",
+      "razon_social": "ASISTIR COOP. DE VIVIENDA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "598",
+      "razon_social": "CHILTERN INTERNATIONAL S.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "599",
+      "razon_social": "TECNOLOGIA DE LA INFORMACIÓN",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "600",
+      "razon_social": "OSDEPYM",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "601",
+      "razon_social": "BUNGE AR S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "602",
+      "razon_social": "TECNONUCLEAR S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "603",
+      "razon_social": "ABSA AGUAS BONAERENSES S.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "604",
+      "razon_social": "NACION BURSATIL SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "605",
+      "razon_social": "CONSULTORIA Y LOGISTICA ADUANERA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "606",
+      "razon_social": "GAFOR SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "607",
+      "razon_social": "BINARIA SEGUROS DE VIDA S",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "608",
+      "razon_social": "MARSH S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "609",
+      "razon_social": "MERCEDES-BENZ AR S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "610",
+      "razon_social": "ATKEARNEY AR S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "611",
+      "razon_social": "CORREO ARGENTINO S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "612",
+      "razon_social": "MERCER AR SAU",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "613",
+      "razon_social": "ARBUMASA S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "614",
+      "razon_social": "HABERCONF AS SRL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "615",
+      "razon_social": "A.D. BARBIERI S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "616",
+      "razon_social": "BANCO PIANO SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "617",
+      "razon_social": "TCBA SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "618",
+      "razon_social": "OSPAC - O. S. DEL PERS. A",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "619",
+      "razon_social": "PINTURERIA MIGUEL SRL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "620",
+      "razon_social": "SUPERVIELLE ASSET MANAGEM",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "621",
+      "razon_social": "ARGEMONE S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "622",
+      "razon_social": "PRISMA MEDIOS DE PAGO S A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "623",
+      "razon_social": "NUEVO BANCO DE SANTA FE",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "624",
+      "razon_social": "ALEXANDER FLEMING S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "625",
+      "razon_social": "SIF AMERICA S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "626",
+      "razon_social": "01 VIAL S.R.L.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "627",
+      "razon_social": "ECOHABITAT SA - EMEPA SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "628",
+      "razon_social": "MUNICIPALIDAD DE FLORENCIO VARELA",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "629",
+      "razon_social": "SAENZ VALIENTE & ASOCIADO",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "630",
+      "razon_social": "COOPERATIVA TRES LIMITES",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "631",
+      "razon_social": "NUTRICIA BAGO S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "632",
+      "razon_social": "HUNTER DOUGLAS",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "633",
+      "razon_social": "UBS BB ARGENTINA S.A.U.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "634",
+      "razon_social": "INGEVAMA S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "635",
+      "razon_social": "ORESTE CONTROLLERS S.A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "636",
+      "razon_social": "QUANTUM TECNOLOGIA S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "637",
+      "razon_social": "ACINDAR S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "638",
+      "razon_social": "OSPEDYC O.S. DEL PERSONAL",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "639",
+      "razon_social": "ESTANCIA Y CABAÃ‘A LAS LI",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "640",
+      "razon_social": "FUNDACION DEL CINE",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "641",
+      "razon_social": "ESTEBAN CRISTI",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "642",
+      "razon_social": "ANALYTICAL TECHNOLOGIES S",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "643",
+      "razon_social": "SIND. TRABAJADORES DE JUE",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "644",
+      "razon_social": "SIND. OBRERO DE LA INDUST",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "645",
+      "razon_social": "EOSA S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "646",
+      "razon_social": "LUXOTTICA AR S.R.L.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "647",
+      "razon_social": "GRAN COOPERATIVA DE CREDI",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "648",
+      "razon_social": "BANCO DE SERVICIOS Y TRAN",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "649",
+      "razon_social": "THE DIFFERENCE S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "650",
+      "razon_social": "TERMOELECTRICA JOSE DE SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "651",
+      "razon_social": "TIXO SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "652",
+      "razon_social": "VERIZON MEDIA HISPANIC AM",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "653",
+      "razon_social": "CHASCO D' ANNA Y CIA SRL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "654",
+      "razon_social": "XYLEM WATER SOLUTIONS AR",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "655",
+      "razon_social": "SOFRE DIGITAL SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "656",
+      "razon_social": "AMCO A MARTINEZ Y CIA SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "657",
+      "razon_social": "BANCO DE FORMOSA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "658",
+      "razon_social": "LABORATORIOS BAGO S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "659",
+      "razon_social": "TERMINALES RIO DE LA PLAT",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "660",
+      "razon_social": "GESTION DE EMPRENDIMIENTO",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "661",
+      "razon_social": "SUPERINTENDENCIA DE SERV.",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "705",
+      "razon_social": "SUPERINTENDENCIA DE SERV. (ID BLOQUEADO. DUPLICADO)",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "662",
+      "razon_social": "FEDERACIÃ³N ARG. DE CÃ¡MA",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "663",
+      "razon_social": "CEM FINANZAS S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "664",
+      "razon_social": "INTERTURIS S.A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "665",
+      "razon_social": "NATURAL ENERGY S.A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "666",
+      "razon_social": "MONTEVERDE S.A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "667",
+      "razon_social": "ADMISION SALUD S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1265",
+      "razon_social": "DILOG OESTE S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "668",
+      "razon_social": "MCLARENS YOUNG AR",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "669",
+      "razon_social": "SADAIC SA",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "670",
+      "razon_social": "WATER TECHNOLOGIES & SOLU",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "671",
+      "razon_social": "CAPITAN CORTES S.A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "672",
+      "razon_social": "JAS FORWARDING DE AR SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "673",
+      "razon_social": "EATON INDUSTRIES (AR) S.A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "674",
+      "razon_social": "ESTUDIO DURRIEU (SOCIEDAD",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "675",
+      "razon_social": "TRANSACCIONES AGENTE DE VALORES",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "676",
+      "razon_social": "FUNDACION IBIS",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "677",
+      "razon_social": "STONEX ASSET MANAGEMENT SA",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "678",
+      "razon_social": "XL INSURANCE AR SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "679",
+      "razon_social": "ASOCIACION DE SEMILLEROS",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "680",
+      "razon_social": "SKF AR S.A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "681",
+      "razon_social": "TELEFONICA DE ARGENTINA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "682",
+      "razon_social": "TIGERENGINEERING AR S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "683",
+      "razon_social": "LACBA SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "684",
+      "razon_social": "OSTEP",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "685",
+      "razon_social": "ENERGIA ARGENTINA SA (ENARSA)",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "686",
+      "razon_social": "SAINT-GOBAIN AR SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "687",
+      "razon_social": "TRANSPORTE 9 DE JULIO S.A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "688",
+      "razon_social": "INFOTAS SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1266",
+      "razon_social": "KM COMUNICACION SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "689",
+      "razon_social": "ZEFIR SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "690",
+      "razon_social": "DESPEGAR COM AR SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "691",
+      "razon_social": "GESTAM AR S.A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1267",
+      "razon_social": "ANTON PROPIEDADES SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "692",
+      "razon_social": "NUTRI HOME SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "693",
+      "razon_social": "SA BCO DE ITALIA Y RIO DE",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "694",
+      "razon_social": "BANCO ODDONE SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1331",
+      "razon_social": "Mandataria de Salud Agrupacion de E",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "696",
+      "razon_social": "FUNDACION UNIVERSIDAD DE",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "697",
+      "razon_social": "ASOCIACION ESCUELAS LINCO",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "698",
+      "razon_social": "CITAP SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "699",
+      "razon_social": "AGRENCO AR SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "700",
+      "razon_social": "SM PUBLISHING AR SRL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "701",
+      "razon_social": "ABB SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1268",
+      "razon_social": "TOP SERVICE SRL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "702",
+      "razon_social": "NIPPON KAIJI KYOKAI",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "703",
+      "razon_social": "STARBUCKS COFFEE AR SRL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "704",
+      "razon_social": "INPI INST.NACIONAL DE LA",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "706",
+      "razon_social": "BERKLEY INTERNATIONAL ART",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "707",
+      "razon_social": "CONEAU - COM. NACIONAL DE",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "708",
+      "razon_social": "SANATORIO LAS LOMAS S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "709",
+      "razon_social": "SOL DE SEPTIEMBRE S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "710",
+      "razon_social": "PROVINCIA LEASING S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "711",
+      "razon_social": "HILTI AR SRL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "712",
+      "razon_social": "FUNDACION FAVALORO",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "713",
+      "razon_social": "FUNDACION UNIVERSITARIA D",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "714",
+      "razon_social": "AADI CAPIF ASOC. CIVIL RE",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "715",
+      "razon_social": "SCHÃŒCO AR S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "716",
+      "razon_social": "BIOSUD S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1269",
+      "razon_social": "FARMALINE S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "717",
+      "razon_social": "SUCESION DE BOBROVSKY SER",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1270",
+      "razon_social": "GUIA LABORAL EMP. DE SERV",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "718",
+      "razon_social": "ITAU ASSET MANAGMENT S.A",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "719",
+      "razon_social": "IOMA INST. DE OBRA MEDICO",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "720",
+      "razon_social": "FIRST DATA CONO SUR S.R.L",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "721",
+      "razon_social": "POSNET S.R.L.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "722",
+      "razon_social": "MINERA ALUMBRERA LIMITED",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "723",
+      "razon_social": "GOBIERNO DE LA CIUDAD DE",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "724",
+      "razon_social": "ENTE NACIONAL DE COMUNICA (ENACOM)",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "725",
+      "razon_social": "MINISTERIO DE TRABAJO,EMP",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1271",
+      "razon_social": "LOGISTICA SALUD S. A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "726",
+      "razon_social": "BASF AR S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "727",
+      "razon_social": "SMG LIFE SEGUROS DE VIDA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "728",
+      "razon_social": "CONSTRUCTORA ANDRADE GUTI",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "729",
+      "razon_social": "COLEGIO DE ABOGADOS DEL D",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "730",
+      "razon_social": "FINCA FLICHMAN S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "731",
+      "razon_social": "HSBC -NYL SEG. DE VIDA (A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "732",
+      "razon_social": "OMENDUS S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "733",
+      "razon_social": "CASIN & ASOCIADOS S.R.L.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "734",
+      "razon_social": "INSTITUTO DE PREV. SOC. P",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "735",
+      "razon_social": "BSBC S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "736",
+      "razon_social": "IBOPE AR S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "737",
+      "razon_social": "OBRA SOCIAL DEL PERSONAL",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "738",
+      "razon_social": "SAPORITI S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "739",
+      "razon_social": "GUY CARPENTER & COMPANY S",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "740",
+      "razon_social": "FERRERO AR S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "741",
+      "razon_social": "CIA. AR DE SEGUROS VICTO",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "742",
+      "razon_social": "LENOVO AR S.R.L.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "743",
+      "razon_social": "CAJA DE JUBILACIONES DE POLICIA PROV BS AS",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "744",
+      "razon_social": "CONSORCIO TRÃ‰BOL S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "745",
+      "razon_social": "SOL NACIENTE SEGUROS S A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "746",
+      "razon_social": "LAKAUT S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1272",
+      "razon_social": "PARQUEPEL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "747",
+      "razon_social": "STONEX SECURITIES SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "748",
+      "razon_social": "REFINERIAS DE GRASAS SUDA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "749",
+      "razon_social": "PAMPA ENERGIA S A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "750",
+      "razon_social": "S.O.I SALUD OCUPACIONAL I",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "751",
+      "razon_social": "TOTAL GAS Y ELECTRICIDAD",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "752",
+      "razon_social": "FUNDACIÃ“N PROSAM PROG. P",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "753",
+      "razon_social": "ADM. NAC. DE MED. ALIM. Y",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "754",
+      "razon_social": "AGUAS Y SANEAMIENTOS ARGE",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "755",
+      "razon_social": "EMERSON AR S.A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "756",
+      "razon_social": "AUTOMATIZACION MICROMECANICA SAIC",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "757",
+      "razon_social": "CONTROLES TECNOVA S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "758",
+      "razon_social": "INOFER S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "759",
+      "razon_social": "SIND. UNICO PERS. ADUANER",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "760",
+      "razon_social": "ROQUE MARCELO JORGE",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "761",
+      "razon_social": "SIND. SOEME SIND. OBR. Y",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "762",
+      "razon_social": "ADM. GRAL. DE PUERTOS SOC",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "763",
+      "razon_social": "ESTANAR ESTANCIAS ARS S.A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "764",
+      "razon_social": "TRANSACCIONES CREDITICIAS",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "765",
+      "razon_social": "BANCO DE AVELLANEDA S.A.",
+      "condicion_impositiva": ""
+    },
+    {
+      "cod_sap": "766",
+      "razon_social": "SEOCA SIND. EMP. Y OBR. D",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "767",
+      "razon_social": "LOS NOVILLOS S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "768",
+      "razon_social": "SIFEME S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1273",
+      "razon_social": "WORLD COLOR",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "769",
+      "razon_social": "FUNDACIÓN HOSPITALARIA",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "770",
+      "razon_social": "ARTE GRAFICO EDITORIAL AR  (AGEA)",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "771",
+      "razon_social": "ALTO PARANÃ S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "772",
+      "razon_social": "BANCO DE SAN JUAN S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "773",
+      "razon_social": "BIODEC S.R.L.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "774",
+      "razon_social": "WEATHERFORD INTL. DE AR S",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "775",
+      "razon_social": "DECREDITOS S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "776",
+      "razon_social": "COLORMATRIX CORPORATION",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "777",
+      "razon_social": "UNIDAD EJECUTORA CENTRAL",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "778",
+      "razon_social": "MARIA ELENA S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "779",
+      "razon_social": "INDUST. DEL PLAST. Y MET.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "780",
+      "razon_social": "YAMAHA MUSIC LATIN AMERIC",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "781",
+      "razon_social": "ARAGONES DE SERV ITV SA S",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "782",
+      "razon_social": "PSA FINANCE ARG. CIA. FIN",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "783",
+      "razon_social": "TNS GALLUP AR S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "784",
+      "razon_social": "FONDO FIDUCIARIO DE INFRA",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "785",
+      "razon_social": "MERCADOS ENERGETICOS CONS",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "786",
+      "razon_social": "TARJETA NARANJA S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "787",
+      "razon_social": "LLORENTE & CUENCA ARG. S.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "788",
+      "razon_social": "HOLMBERG & CASARETTO S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "789",
+      "razon_social": "MARINOZZI-MAZZITELLI & AS",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "790",
+      "razon_social": "ASOC. MUTUAL ARG. SALUD Y",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "791",
+      "razon_social": "COOPERATIVA DE CREDITO,CONSUMO",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "792",
+      "razon_social": "CREDYMAND SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "793",
+      "razon_social": "PROMOTORA SOCIAL VIDA SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "794",
+      "razon_social": "VIAL 3 S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "795",
+      "razon_social": "FED. MEDICA DEL CONURBANO",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "796",
+      "razon_social": "BANCO DE INVERSION Y COMERCIO EXTERIOR (BICE)",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "797",
+      "razon_social": "PATAGONIA BIOENERGIA S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "798",
+      "razon_social": "ORG. REG. SIST. NAC. DE A",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "799",
+      "razon_social": "UNIV. NACIONAL ARTURO JAURETCHE",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "800",
+      "razon_social": "TEXTURAS Y DISEÃ‘OS S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "801",
+      "razon_social": "CENTRO DE LA VISION LA PL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1274",
+      "razon_social": "IMPREBA S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1275",
+      "razon_social": "ELECTROINGENIERIA S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "802",
+      "razon_social": "ASOCIACION VECINAL NORDEL (AVN Nordelta)",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "803",
+      "razon_social": "DSM S.A.D S M SOCIEDAD AN",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "804",
+      "razon_social": "ASOC. MUTUAL INT. DE CONS",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "805",
+      "razon_social": "LDC AR S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "806",
+      "razon_social": "MERCK S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "807",
+      "razon_social": "CONSTRUCTORA SAN JOSE ARG",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "808",
+      "razon_social": "IMPLANTES CLP S.R.L",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "809",
+      "razon_social": "BANCO MARIVA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1276",
+      "razon_social": "VIALNOA S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1277",
+      "razon_social": "CONSTRUCCIONES TERMICAS S",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "810",
+      "razon_social": "LA NACIÓN SA (EX CODEVISA)",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "811",
+      "razon_social": "DIAZ MATIAS ABEL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "812",
+      "razon_social": "GENZYME DE AR S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "813",
+      "razon_social": "VIDONI DORA CLAUDIA",
+      "condicion_impositiva": ""
+    },
+    {
+      "cod_sap": "814",
+      "razon_social": "PWA POLIURETANOS WOODBRID",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "815",
+      "razon_social": "OBRA SOCIAL DE COMISARIOS",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "816",
+      "razon_social": "LOGINTER S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "817",
+      "razon_social": "GUSTAVO QUIROGA E.P.M S.A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "818",
+      "razon_social": "BANCO DE SANTA CRUZ SOCIE",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "819",
+      "razon_social": "LYNX VALORES S.A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "820",
+      "razon_social": "FERNANDO MENDEZ Y CIA SC",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "821",
+      "razon_social": "LATINCONTENT S.R.L.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "822",
+      "razon_social": "GAMERMAN DANIEL ADOLFO",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "823",
+      "razon_social": "INST. NAC DE ASOCIATIVISM",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "824",
+      "razon_social": "CONTENIDOS PUBLICOS SOCIE",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "825",
+      "razon_social": "OBRAS CIVILES ANDINAS S.A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "826",
+      "razon_social": "ESCANDINAVIAN LA PLATA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "827",
+      "razon_social": "ASOCIACION MUTUAL HOGAR LATINO",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "828",
+      "razon_social": "ASOCIACION MUTUAL DE AYUDA SOLIDARIA",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "829",
+      "razon_social": "ARGENTA ENERGIA SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "830",
+      "razon_social": "RITTAL SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "831",
+      "razon_social": "APEN SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "832",
+      "razon_social": "ROMBO COMPAÃ‘IA FINANCIER",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "833",
+      "razon_social": "CERAMICA CTIBOR S A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "834",
+      "razon_social": "GPAT COMPAÃ‘IA FINANCIERA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "835",
+      "razon_social": "FICOSA AR S.A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "836",
+      "razon_social": "CAMARA DE EXPORTADORES DE",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "837",
+      "razon_social": "COM FRANCAISE D ASSURANCE",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1278",
+      "razon_social": "FLORA DANICA SAIC",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "838",
+      "razon_social": "VIACART S A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1279",
+      "razon_social": "PROMO VER SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "839",
+      "razon_social": "APTAR AR S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "840",
+      "razon_social": "MIRGOR SA CI FI A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "841",
+      "razon_social": "FEDERA SRL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "842",
+      "razon_social": "MUNICIPALIDAD DE LA MATANZA",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1286",
+      "razon_social": "REGISTROS MINEROS ARG S.A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "843",
+      "razon_social": "GESTION FINANCIERA SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "844",
+      "razon_social": "CLINICA MODELO LOS CEDROS",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "845",
+      "razon_social": "QUIRON ASSET MANAGEMENT S",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "846",
+      "razon_social": "WORLD COURIER S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "847",
+      "razon_social": "GALILEO ARG. SOC. GTE DE",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "848",
+      "razon_social": "SHILTON WEYERS Y ASOCIADO",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "849",
+      "razon_social": "ALLARIA LEDESMA FONDOS AD",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "850",
+      "razon_social": "OSPRERA OBRA SOCIAL PER.",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "851",
+      "razon_social": "CLION POLIMEROS S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "852",
+      "razon_social": "PURO TABACO",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1280",
+      "razon_social": "GRUPO D.D.M. S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "853",
+      "razon_social": "BEC CONSULTINGT GROUP S.A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1287",
+      "razon_social": "SONY PICTURES RELEASING I",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "854",
+      "razon_social": "DESARROLLOS GASTRONOMICOS",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "855",
+      "razon_social": "CARVAJAL INVERSIONES",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "856",
+      "razon_social": "PAN AMERICAN ENERGY LLC S",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1358",
+      "razon_social": "Consejo Federal de Inversiones",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "857",
+      "razon_social": "CRANE WORLD LOGISTICS AR",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "858",
+      "razon_social": "GENERAL MOTORS DE AR SRL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1326",
+      "razon_social": "NACION LEASING SA",
+      "condicion_impositiva": ""
+    },
+    {
+      "cod_sap": "859",
+      "razon_social": "MEGA QM SA",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "860",
+      "razon_social": "ARGENCONS SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1288",
+      "razon_social": "AXIS SOC. GERENTE DE FDOS",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "861",
+      "razon_social": "INTERNATIONAL FIRST SERVI",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "862",
+      "razon_social": "UISCUMARR",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "863",
+      "razon_social": "CORP. DE RADIO Y TELEVISI",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "864",
+      "razon_social": "PDVSA S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1289",
+      "razon_social": "SUTOURS SRL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "865",
+      "razon_social": "FIDEICOMISO FINANCIERO BH",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "866",
+      "razon_social": "THALER AGENCIA DE CAMBIO",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "867",
+      "razon_social": "MPS MEDICINA PLATENSE SOL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "868",
+      "razon_social": "COHEN S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "869",
+      "razon_social": "EMPRESAS RODOBENS SA. DE",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "870",
+      "razon_social": "ARCOS DORADOS AR S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "871",
+      "razon_social": "COMPAÑIA GLOBAL DE INVER",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1281",
+      "razon_social": "FCA IMPORTADORA SRL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "872",
+      "razon_social": "COMEX MAS S.R.L.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "873",
+      "razon_social": "VOLKSWAGEN SA DE AHORRO P",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "874",
+      "razon_social": "PELLEGRINI S A GERENTE DE",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "875",
+      "razon_social": "SCHRODER SA SOC GERENTE D",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "876",
+      "razon_social": "QUICKFOOD SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "877",
+      "razon_social": "PROGRAMA DE ACCESO AL CREDITO A LA COMPETETIVIDAD PARA MICRO",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "878",
+      "razon_social": "TRANSAMERICAN TELECOMUNIC",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "879",
+      "razon_social": "CONSULTATIO ASSET MANAGEM",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "880",
+      "razon_social": "DELTA ASSET MANAGEMENT S.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "881",
+      "razon_social": "BALANZ SOCIEDAD GERENTE D",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "882",
+      "razon_social": "PRODUSERVICE SRL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "883",
+      "razon_social": "SOUTHERN TRUST SOCIEDAD G",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1236",
+      "razon_social": "AGCO ARGENTINA SOCIEDAD A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "884",
+      "razon_social": "TELEFONICA MOVILES AR S.A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "885",
+      "razon_social": "MINISTERIO DE SEGURIDAD -",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "886",
+      "razon_social": "BANCO COMAFI SOCIEDAD ANO",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "887",
+      "razon_social": "CENTRO DE AUTOMOTORES S.A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "888",
+      "razon_social": "SINDICATO DEL PERSONAL DE",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "889",
+      "razon_social": "BANCO DE GALICIA Y BUENOS",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "890",
+      "razon_social": "TECHNISYS S.A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "891",
+      "razon_social": "CENTRO CIENTIFICO TECNOLOGICO",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "892",
+      "razon_social": "FERROMEL SOCIEDAD ANONIMA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "893",
+      "razon_social": "ESTABLECIMIENTO EL CENCER",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "894",
+      "razon_social": "MAGA SANAR 12,SOCIEDAD EN",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "895",
+      "razon_social": "COOPERATIVA UNICREDITO LI",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "896",
+      "razon_social": "ABBOTT LABORATORIES AR SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "897",
+      "razon_social": "FERROVÍAS PARTICIPACIONES SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "898",
+      "razon_social": "AUTOMOTORES JUAN MANUEL F",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "899",
+      "razon_social": "MAS ERRAZURIZ SA-CONSTRUC",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "900",
+      "razon_social": "MADALENA ENERGY AR S.R.L.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "901",
+      "razon_social": "INACAP - INSTITUTO ARGENT",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "902",
+      "razon_social": "WORLEY AR S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "903",
+      "razon_social": "TELEVISION FEDERAL S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1290",
+      "razon_social": "JEFATURA DE GABINETE DE M",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1282",
+      "razon_social": "MINISTERIO DE DESARROLLO",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "904",
+      "razon_social": "AVATURE S.R.L.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "905",
+      "razon_social": "CADENAS GUSTAVO FERNANDO",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "906",
+      "razon_social": "MERCADO ABIERTO ELECTRONI",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "907",
+      "razon_social": "MINISTERIO DE EDUCACION",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "908",
+      "razon_social": "EMO LOGISTIC SOCIEDAD ANO",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "909",
+      "razon_social": "AR PARTNERS SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "910",
+      "razon_social": "CAR GROUP SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "911",
+      "razon_social": "PERALES AGUIAR SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "912",
+      "razon_social": "ARROW AR SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "913",
+      "razon_social": "CESCE AR S.A. SEGUROS DE",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "914",
+      "razon_social": "ARGENWINE SOCIEDAD ANONIM",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "915",
+      "razon_social": "MINISTERIO DE SALUD",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "916",
+      "razon_social": "CARNE HEREFORD SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "917",
+      "razon_social": "THE CHEMOURS COMPANY SRL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "918",
+      "razon_social": "COOPERATIVA DE VIVIENDA C",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "919",
+      "razon_social": "ELT AR S A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "920",
+      "razon_social": "SUPERINTENDENCIA DE BIENESTAR POLICIA FEDERAL",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "921",
+      "razon_social": "PROGRAMA PARA EL DESARROL",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "922",
+      "razon_social": "DORA ESTHER CUCCARO",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "923",
+      "razon_social": "SANOFI PASTEUR S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "924",
+      "razon_social": "ALUMINI ENGENHARIA S.A. S",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "925",
+      "razon_social": "SOCIEDAD AR DE PEDIATRIA",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "926",
+      "razon_social": "BULL MARKET BROKERS S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "927",
+      "razon_social": "FACIMEX VALORES SOCIEDAD",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "928",
+      "razon_social": "OBRA SOCIAL DE LOS EMPLEA",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "929",
+      "razon_social": "LABORATORIOS EXCELENTIA S",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "930",
+      "razon_social": "BNP PARIBAS SUCURSAL 01",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "931",
+      "razon_social": "AIR CARRY SERVICE AGENCY",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "932",
+      "razon_social": "COMPAÃ‘IA FINANCIERA AR S",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "933",
+      "razon_social": "UNIVERSIDAD ARGENTINA DE LA EMPRESA (UADE)",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "934",
+      "razon_social": "FONDO DE GARANTIA DE LOS",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1283",
+      "razon_social": "OPERADORA FERROVIARIA SOCIEDAD DEL ESTADO",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "935",
+      "razon_social": "AUTOVIA DEL MAR S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "936",
+      "razon_social": "FRIGOTEC SRL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "937",
+      "razon_social": "ZEITER SRL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "938",
+      "razon_social": "INTERBANKING SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "939",
+      "razon_social": "SECRETARIA DE AMBIENTE Y DESARROLLO",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "940",
+      "razon_social": "AEROLINEAS ARS SOCIEDAD A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "941",
+      "razon_social": "TWG WARRANTY SERVICES INC",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "942",
+      "razon_social": "SPECIAL DIVISION CORREDOR",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "943",
+      "razon_social": "S M L S A",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "944",
+      "razon_social": "CITIBANK N AÂ",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "945",
+      "razon_social": "GLOBAL STRATEGIES S.A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "946",
+      "razon_social": "OCSA SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "947",
+      "razon_social": "TFCF LATIN AMERICAN CHANN",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "948",
+      "razon_social": "BRADESCO S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "949",
+      "razon_social": "AR CORPORACION FINANCIERA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "950",
+      "razon_social": "PRESTALIA S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "951",
+      "razon_social": "FUNDACION CENTRO DE INVES (HARVARD)",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "952",
+      "razon_social": "SONY PICTURES RSING A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "953",
+      "razon_social": "SUPERVIELLE SEGUROS S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "954",
+      "razon_social": "DROGUERIA MARTORANI S A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "955",
+      "razon_social": "BANCO HIPOTECARIO SOCIEDA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "956",
+      "razon_social": "VOLKSWAGEN CREDIT COMPAÃ‘",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "957",
+      "razon_social": "INFORMACION Y DECISION CO",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "958",
+      "razon_social": "FORMULAB SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "959",
+      "razon_social": "ASOFARMA SOC ANONIMA INDU",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "960",
+      "razon_social": "INSTITUTO MUNICIPAL DE DESARROLLO ECONOMICO DE LA MATANZA",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "961",
+      "razon_social": "COMISION PROVINCIAL POR LA MEMORIA",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "962",
+      "razon_social": "EARLY CROP S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "963",
+      "razon_social": "SPM SALUD S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "964",
+      "razon_social": "DIGEX SRL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1284",
+      "razon_social": "FCA ARGENTINA SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "965",
+      "razon_social": "INGREDION AR S.R.L.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1367",
+      "razon_social": "Ardion SA (ex ingredion) - bloqueado",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "966",
+      "razon_social": "INTERBAS S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "967",
+      "razon_social": "IBERARGEN S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "968",
+      "razon_social": "BINGOS DEL OESTE SOCIEDAD",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "969",
+      "razon_social": "BINGOS PLATENSES S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "970",
+      "razon_social": "INTERJUEGOS S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "971",
+      "razon_social": "CAJA COMPLEMENTARIA DE PR",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "972",
+      "razon_social": "AGENCIA NACIONAL DE PROMOCION DE LA",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "973",
+      "razon_social": "MOBILE STREAMS DE AR S.R.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "974",
+      "razon_social": "ARGENFUNDS S.A.",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "975",
+      "razon_social": "DULMES SOCIEDAD ANONIMA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "976",
+      "razon_social": "LABORATORIO CUENCA S A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "977",
+      "razon_social": "SUPERINTENDENCIA DE SEGUROS DE LA NACIÓN",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "978",
+      "razon_social": "MERRILL LYNCH AR S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "979",
+      "razon_social": "DIRECCION NACIONAL DE MIGRACIONES",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1299",
+      "razon_social": "Nexa Recursos Minerais",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "980",
+      "razon_social": "TIMKEN AR S R L",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "981",
+      "razon_social": "BANCO PROVINCIA DEL NEUQU",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "982",
+      "razon_social": "FARMITRON SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "983",
+      "razon_social": "KRIMOV S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "984",
+      "razon_social": "FUNDACION PRO UNIVERSIDAD",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "985",
+      "razon_social": "HUTCHINSON AR S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "986",
+      "razon_social": "ZOFINGEN INVESTMENT SA",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "987",
+      "razon_social": "SPECTRUM ASA SUCURSAL AR",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "988",
+      "razon_social": "BANCO DE CORRIENTES SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "989",
+      "razon_social": "CONSULTATIO INVESTMENTS S",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "990",
+      "razon_social": "DELOITTE & CO SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "991",
+      "razon_social": "ARKEMA ARGENTINA SAU (EX VETEK S.A.U.)",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "992",
+      "razon_social": "SYCIC SOCIEDAD ANONIMA CO",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "993",
+      "razon_social": "P V N TURISMO SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "994",
+      "razon_social": "Â ASOCIACION BANCARIA S E",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "995",
+      "razon_social": "MEDLOG AR S.A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "996",
+      "razon_social": "LUBRICANTES AVELLANEDA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "997",
+      "razon_social": "CONTRERAS HERMANOS SOCIED",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "998",
+      "razon_social": "OFFICENET S.A. (ALOT)",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "999",
+      "razon_social": "FAURECIA AR S. A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1000",
+      "razon_social": "METROGAS S A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1001",
+      "razon_social": "SANATORIO MODELO QUILMES",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1421",
+      "razon_social": "FATE SAICI",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1002",
+      "razon_social": "PENALTY AR SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1003",
+      "razon_social": "GESTION FORWARD SRL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1004",
+      "razon_social": "PERFORMANCE SPECIALTY PRO",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1005",
+      "razon_social": "MINISTERIO DE GOBIERNO BS",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1006",
+      "razon_social": "GESNEXT AR SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1322",
+      "razon_social": "FACTORING",
+      "condicion_impositiva": ""
+    },
+    {
+      "cod_sap": "1007",
+      "razon_social": "BICE FIDEICOMISOS S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1008",
+      "razon_social": "CREDITIA FIDEICOMISO FINA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1009",
+      "razon_social": "RODEO FILMS",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1010",
+      "razon_social": "NSS SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1011",
+      "razon_social": "SP HEALTH GROUP",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1012",
+      "razon_social": "ACARA",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1321",
+      "razon_social": "ACARA SERVICIOS (pagador)",
+      "condicion_impositiva": ""
+    },
+    {
+      "cod_sap": "1013",
+      "razon_social": "FIDEICOMISO CENTRAL TERMO",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1323",
+      "razon_social": "FIDEICOMISO OB. DE TRANSPORTE",
+      "condicion_impositiva": ""
+    },
+    {
+      "cod_sap": "1324",
+      "razon_social": "FIDEICOMISO DE GARANTIA GENREN",
+      "condicion_impositiva": ""
+    },
+    {
+      "cod_sap": "1325",
+      "razon_social": "FIDEICOMISO Ctral HIDROELECT PUNTA",
+      "condicion_impositiva": ""
+    },
+    {
+      "cod_sap": "1014",
+      "razon_social": "PROFERTIL S A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1015",
+      "razon_social": "FITO PAEZ S.R.L.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1016",
+      "razon_social": "LSG SKY CHEFS AR S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1017",
+      "razon_social": "COBRO DIGITAL S.R.L.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1018",
+      "razon_social": "IATEC S.A. (INDUSTRIA AUS",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1019",
+      "razon_social": "PICKIT AR",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1020",
+      "razon_social": "Â ABBVIE SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1021",
+      "razon_social": "ACCICOM S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1022",
+      "razon_social": "ADMINISTRACION NACIONAL DE AVIACION",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1023",
+      "razon_social": "ADVANCED ORGANIC MATERIAL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1024",
+      "razon_social": "AEROVIAS DEL CONTINENTE (AVIANCA)",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1025",
+      "razon_social": "AGRUP. DE COLAB. GRUPO PA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1026",
+      "razon_social": "AQUILES SISTEMAS DE INFOR",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1027",
+      "razon_social": "ASOC. MUTUALISTA DE EMPL.",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1028",
+      "razon_social": "ASOCIACION CIVIL GREEN TR",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1029",
+      "razon_social": "ASOC. DE PROD. ASESORES D",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1030",
+      "razon_social": "AUTOMOVIL CLUB ARGENTINO",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1031",
+      "razon_social": "AUTONORT SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1032",
+      "razon_social": "BAGLEY AR S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1033",
+      "razon_social": "BANCO CMF SOCIEDAD ANONIM",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1034",
+      "razon_social": "BANCO DE LA PCIA DE CORDOBA (BANCOR)",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1035",
+      "razon_social": "BANCO DE SERVICIOS FINANC",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1036",
+      "razon_social": "BANCO MACRO S.A.- WORLDLI",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1037",
+      "razon_social": "BARRERA ERNESTO",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1038",
+      "razon_social": "BIOFARMA S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1039",
+      "razon_social": "C.H.ROBINSON WORD ARG SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1040",
+      "razon_social": "LUCIANA MARIEL COCA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1041",
+      "razon_social": "CAJA COMPLEMENTARIA DE JU",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1042",
+      "razon_social": "CAROSSIO VAIROLATTI Y CIA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1043",
+      "razon_social": "CHEEKY S.A. -",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1044",
+      "razon_social": "CLINICA GENERAL OBST Y CI",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1045",
+      "razon_social": "COLEGIO PROFESIONAL DE PS",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1046",
+      "razon_social": "COMPAÃ±IA DISTRIBUIDORA Y",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1237",
+      "razon_social": "CONIFERAL S A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1047",
+      "razon_social": "COOPERATIVA DE TRABAJO CA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1048",
+      "razon_social": "CORPORACION AR DE LIMPIEZ (corpal)",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1049",
+      "razon_social": "CORPORATE FITNESS S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1050",
+      "razon_social": "SDI-SERVICIOS DEL INTERIO",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1051",
+      "razon_social": "CREDICOOP COMPAÑIA DE SEGUROS",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1052",
+      "razon_social": "CREDITIA S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1053",
+      "razon_social": "CRYSTAL SOLUTIONS S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1054",
+      "razon_social": "SISTEMAS GLOBALES SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1055",
+      "razon_social": "DELEGACION METROPOLITANA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1056",
+      "razon_social": "Â DHL SUPPLY CHAIN (AR) S",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1057",
+      "razon_social": "DIA AR S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1058",
+      "razon_social": "DIREC GRAL DE TES Y CRD P",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1059",
+      "razon_social": "DIRECCION DE ADMINISTRACIÓN DEL PODER JUDICIAL",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1060",
+      "razon_social": "ELDEN S.A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1061",
+      "razon_social": "ELE SEGURIDAD S.R.L.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1062",
+      "razon_social": "EMPRESA PROVINCIAL DE ENE",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1063",
+      "razon_social": "ENTE NACIONAL DE OBRAS HIDRICAS",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1064",
+      "razon_social": "ENTE REGULADOR DE SERVICI",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1065",
+      "razon_social": "ENTERTAINMENT DEPOT S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1066",
+      "razon_social": "ESTUDIO DELLA ROCCA PIAZZ",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1067",
+      "razon_social": "ESTUDIO O FARRELL SOCIEDA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1068",
+      "razon_social": "Â ESTUDIO VILLARES Y ASOC",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1069",
+      "razon_social": "MOBILE SERVICES INTERNATI",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1070",
+      "razon_social": "EXPRESO LANCIONI S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1071",
+      "razon_social": "FEDERACION MEDICA GREMIAL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1072",
+      "razon_social": "FONTANA MARIA DE LAS MERC",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1073",
+      "razon_social": "Fundacion Progreso de U.C. de Cordo",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1317",
+      "razon_social": "Fundacion Universidad Pascal",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1074",
+      "razon_social": "Fundes Costa Rica SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1075",
+      "razon_social": "GENERAL INDUSTRIES AR S.A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1076",
+      "razon_social": "GESTIVA S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1077",
+      "razon_social": "GORVIX S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1078",
+      "razon_social": "GRUPO CONCESIONARIO DEL O",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1079",
+      "razon_social": "HC CORPORATION AR SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1080",
+      "razon_social": "HERBALIFE INTERNATIONAL A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1081",
+      "razon_social": "INC SOCIEDAD ANONIMA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1082",
+      "razon_social": "IMA SERVICIOS IND. ARG. S",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1083",
+      "razon_social": "INDUCONST S.A. (ahora IMPACOR SA)",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1340",
+      "razon_social": "Impacor",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1084",
+      "razon_social": "INMOBILIARIA GANDULFO TAG",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1085",
+      "razon_social": "INPACO S A I C E I",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1086",
+      "razon_social": "INST. TRAUMATOLOGICO DE C",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1087",
+      "razon_social": "INTERBAIRES S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1088",
+      "razon_social": "INWORK AR S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1089",
+      "razon_social": "JUAN MANUEL BORTOLOTTO",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1090",
+      "razon_social": "JUSTO Y MARTINEZ S.A.C.E.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1091",
+      "razon_social": "KODAK AR SAIC",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1092",
+      "razon_social": "KONECTA SERVICIOS ADMINIS",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1093",
+      "razon_social": "KROMBERG & SCHUBERT AR SR",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1094",
+      "razon_social": "LA CAMPAGNOLA SOCIEDAD AN",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1238",
+      "razon_social": "LABAT ANALIA GLORIA",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1095",
+      "razon_social": "LABORATORIO VANNIER S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1096",
+      "razon_social": "MACRO FONDOS SOC.GERENTE",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1097",
+      "razon_social": "MANTELECTRIC ICISA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1098",
+      "razon_social": "MARTINEZ,DE ORTA Y ASOCIA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1099",
+      "razon_social": "MASTERFOODS AR LTD",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1100",
+      "razon_social": "MATHIESEN AR S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1101",
+      "razon_social": "MINISTERIO DE AGRICULTURA",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1102",
+      "razon_social": "MIN DE GOB DERECHOS HUM. (SALTA)",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1103",
+      "razon_social": "MINISTERIO DE SALUD (CÓRDOBA)",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1104",
+      "razon_social": "MODOC S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1105",
+      "razon_social": "MUNICIPALIDAD DE CÓRDOBA",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1106",
+      "razon_social": "MUNICIPALIDAD DE PILAR",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1107",
+      "razon_social": "NOVOCAP S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1108",
+      "razon_social": "OPCION SEGUROS S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1109",
+      "razon_social": "ORGANIZACION DAKAR S.A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1110",
+      "razon_social": "ORGANIZACION DE ESTADOS I",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1111",
+      "razon_social": "PATALLO GARCIA MARIA TRIN",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1112",
+      "razon_social": "PRC S.A.U",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1113",
+      "razon_social": "PRAXAIR AR SRL (pidió la baja)",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1114",
+      "razon_social": "PROFICIO INVESTMENT S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1115",
+      "razon_social": "PROSEGUR ACTIVA AR S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1116",
+      "razon_social": "PROTECTIA S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1117",
+      "razon_social": "RACECRAFT S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1118",
+      "razon_social": "RADIO Y TELEVISION AR S.E",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1119",
+      "razon_social": "REST PERSONAL EVENTUAL SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1120",
+      "razon_social": "ROYAL CANIN AR S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1121",
+      "razon_social": "S & C INVERSIONES S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1285",
+      "razon_social": "SALUD EN EL HOGAR S.R.L",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1122",
+      "razon_social": "SALUD INDUSTRIAL S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1123",
+      "razon_social": "SAMCRO S.A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1124",
+      "razon_social": "MIN. DE PROM. DEL EMPLEO",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1125",
+      "razon_social": "MIN. DE AGRI. GANADERIA Y",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1126",
+      "razon_social": "SECRETARIA DE TRANSPORTE",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1127",
+      "razon_social": "SEDEX AR SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1128",
+      "razon_social": "SERVENTE Y CIA. S.A. SOCI",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1129",
+      "razon_social": "SERVIN SEGURIDAD S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1130",
+      "razon_social": "RANDSTAD ARGENTINA S A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1131",
+      "razon_social": "SIRO S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1132",
+      "razon_social": "SIXTOCOR SRL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1133",
+      "razon_social": "GRUPO NCK S.R.L",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1134",
+      "razon_social": "SOPORTE HOSPITALARIO S.R.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1135",
+      "razon_social": "STRATTON NEA SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1136",
+      "razon_social": "TECNOTREE AR SRL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1137",
+      "razon_social": "TELEMERCADO S.R.L.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1138",
+      "razon_social": "TESTORELLI S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1139",
+      "razon_social": "GCDI SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1140",
+      "razon_social": "TRANSPORTADORA CAUDALES JUNCADELLA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1141",
+      "razon_social": "VICTORIO PODESTA Y CIA. S",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1142",
+      "razon_social": "VIZORA DESARROLLOS INMOBI",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1143",
+      "razon_social": "WENANCE SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1144",
+      "razon_social": "WHIRLPOOL AR S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1145",
+      "razon_social": "ARCOR S A I C",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1146",
+      "razon_social": "OCASA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1147",
+      "razon_social": "AGENCIA DE CORDOBA DE INV",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1148",
+      "razon_social": "NEXO INDUSTRIAL SRL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1149",
+      "razon_social": "BANCO DEL SOL S.A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1150",
+      "razon_social": "PETROURUGUAY SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1151",
+      "razon_social": "UNIVERSIDAD NACIONAL DE CORDOBA",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1152",
+      "razon_social": "CRECER SGR",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1153",
+      "razon_social": "COOPERATIVA DE CREDITO Y VIVIENDA UNICRED LIMITADA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1300",
+      "razon_social": "Sila Do Brasil",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1154",
+      "razon_social": "BENEDIT BURSATIL S.A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1155",
+      "razon_social": "CAMBIO ALPE S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1156",
+      "razon_social": "BINARIA SEGUROS DE RETIRO",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1157",
+      "razon_social": "ASEGURADORES ARGENTINOS C",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1158",
+      "razon_social": "MOTOROLA MOBILITY OF AR S",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1159",
+      "razon_social": "DELTA COMPRESION SRL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1160",
+      "razon_social": "ASEGE SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1161",
+      "razon_social": "EL DESVELO SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1162",
+      "razon_social": "LOTERIA DE LA PROVINCIA D",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1163",
+      "razon_social": "LX AR SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1164",
+      "razon_social": "ABERTIS INFRAESTRUCTURAS",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1165",
+      "razon_social": "DART SUDAMERICANA SRL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1166",
+      "razon_social": "SPEED CUSTOMS SRL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1167",
+      "razon_social": "SARTORIUS AR SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1168",
+      "razon_social": "YUSEN LOGISTICS AR SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1169",
+      "razon_social": "ESTUDIO BECCAR VARELA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1170",
+      "razon_social": "CROSSHIPPING SRL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1171",
+      "razon_social": "BIOMAKERS SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1172",
+      "razon_social": "SUCESORES DE ALFREDO WILL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1301",
+      "razon_social": "IP TEL SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1173",
+      "razon_social": "POWER VT SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1174",
+      "razon_social": "SERVICIOS AGROPECUARIOS S",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1175",
+      "razon_social": "DIRECCION NACIONAL DE VIA",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1176",
+      "razon_social": "CAJA DE SEG SOC PARA ODON",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1177",
+      "razon_social": "ESTADO MAYOR GENERAL DE LA ARMADA",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1178",
+      "razon_social": "VINCULOS S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1179",
+      "razon_social": "TEADIT AR SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1180",
+      "razon_social": "GENES II SEGUROS DE RETIR",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1181",
+      "razon_social": "OBRA SOCIAL DE LA UNION DE LOS TRABAJADORES",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1182",
+      "razon_social": "Â INVERTIR EN BOLSA .S.A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1183",
+      "razon_social": "TULSA OILFIELD EQUIPMENT",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1184",
+      "razon_social": "CONTAINER TERMINAL SER",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1239",
+      "razon_social": "OBRA SOCIAL DE CONDUCTORE",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1185",
+      "razon_social": "Â OBRA SOCIAL DE MINISTRO",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1186",
+      "razon_social": "CONSEJO EMPRESARIO ARGENTINO PARA EL DESARROLLO SOSTENIBLE",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1336",
+      "razon_social": "Direxa SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1187",
+      "razon_social": "HOSPITAL EL CRUCE",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1188",
+      "razon_social": "BALDOR S.R.L.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1189",
+      "razon_social": "VOLKSWAGEN ARGENTINA S A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1338",
+      "razon_social": "Direc. Gral de Adm del Min de Salud (mismo que el 1103 sap)",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1307",
+      "razon_social": "BIOMERIEUX ARGENTINA SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1240",
+      "razon_social": "JEBSEN SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1241",
+      "razon_social": "NARANJA DIGITAL COMPAÃ‘IA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1190",
+      "razon_social": "Â IMPRUNETA S.A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1242",
+      "razon_social": "SINDICATO DE CONDUCTORES",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1191",
+      "razon_social": "JYC COMEX (es Comex Interpoint  SA) 1341 sap - 1425 BJ",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1341",
+      "razon_social": "Burgoni Comex SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1192",
+      "razon_social": "ASSURANT SERVICES ARGENTINA SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1243",
+      "razon_social": "FERREYRA DIEGO JEREMIAS",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1235",
+      "razon_social": "AVALUAR SOCIEDAD DE GARAN",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1349",
+      "razon_social": "2030 SRL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1244",
+      "razon_social": "MARMO BRA SRL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1193",
+      "razon_social": "RENAPER",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1245",
+      "razon_social": "RR LOGISTICS CARGO S.R.L.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1246",
+      "razon_social": "CARRERAS TOMAS OCTAVIO",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1343",
+      "razon_social": "DAS",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1291",
+      "razon_social": "JPH S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1247",
+      "razon_social": "Â MICHELIN ARGENTINA SA I",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1248",
+      "razon_social": "VITRIUM CAPITAL SA (AHORA ES ZULPREY 1368 SAP)",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1328",
+      "razon_social": "Vitrium Capital SA (ES EL 1368 SAP)",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1368",
+      "razon_social": "Zulprey SA Sucursal Argentina",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1335",
+      "razon_social": "ARM CARGO SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1253",
+      "razon_social": "METLIFE SERVICIOS SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1334",
+      "razon_social": "ARM SERVICE SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1309",
+      "razon_social": "ESTABLECIMIENTO DERBRU M.V. SRL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1249",
+      "razon_social": "MAGEL SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1348",
+      "razon_social": "Garcia Federico Ezequiel",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1306",
+      "razon_social": "A giacomelli SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1250",
+      "razon_social": "MCLATAM SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1251",
+      "razon_social": "MASEGOSA SERVICIOS MARITI",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1252",
+      "razon_social": "ALE HEAVYLIFT AUSTRAL S.A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1352",
+      "razon_social": "Cocina Urbano",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1310",
+      "razon_social": "PAEZ RODOLFO",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1308",
+      "razon_social": "MINISTERIO DE FINANZAS DIR. ADM.",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1330",
+      "razon_social": "CMC Di Ravenna Argentina",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1316",
+      "razon_social": "Sanatorio Otamendi",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1318",
+      "razon_social": "Colegio de Veterinarios",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1327",
+      "razon_social": "Susana Hilda Menendez",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1332",
+      "razon_social": "almaceneste del este",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1333",
+      "razon_social": "Vitullo Roberto Fernando",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1339",
+      "razon_social": "Vitensen SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1342",
+      "razon_social": "Macro Warrants SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1346",
+      "razon_social": "Ricky Sarkany S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1350",
+      "razon_social": "Ortiz Villalba Javier",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1351",
+      "razon_social": "Honorable Camara de Diputados de la Nación",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1353",
+      "razon_social": "Ojeda Juan Ramón",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1354",
+      "razon_social": "Ruhrpumpen Argentina SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1356",
+      "razon_social": "Obra Social de Docentes Particulares (OSDOP)",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1361",
+      "razon_social": "INGRAM",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1362",
+      "razon_social": "Confidas Cooperativa de Credito",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1364",
+      "razon_social": "Galerias Pacifico SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1370",
+      "razon_social": "Union de Rugby de Bs As",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1365",
+      "razon_social": "Compania Argentina de Tierras SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1383",
+      "razon_social": "Larocca Neumáticos SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1371",
+      "razon_social": "Transcargo Argentina SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1386",
+      "razon_social": "Biofarma Agropecuaria SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1391",
+      "razon_social": "Ingenia Grupo Inversor SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1392",
+      "razon_social": "Etercor SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1393",
+      "razon_social": "Mariano Larreteguy y Asoc SRL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1394",
+      "razon_social": "CONSULADO GENERAL DE ITALIA",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1196",
+      "razon_social": "GALENO ART SA",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1254",
+      "razon_social": "MUNICIPALIDAD DE AVELLANEDA",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1212",
+      "razon_social": "ASOCIACION DE MEDICOS DE GRAL SAN MARTIN Y TRES DE FEBRERO",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1215",
+      "razon_social": "AGREMIACION MEDICA DE ENSENADA",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1199",
+      "razon_social": "ASOCIACION DE FONIATRIA A",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1227",
+      "razon_social": "REFINPEL SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1206",
+      "razon_social": "SUPERINTENDENCIA DE RIEGOS DEL TRABAJO (SRT)",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1208",
+      "razon_social": "ACLIBA",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1228",
+      "razon_social": "VMBC S.A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1218",
+      "razon_social": "ASOCIACION REGIONAL DE DI",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1220",
+      "razon_social": "FEDERACION ODONTOLOGICA DE LA PRONVICIA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1221",
+      "razon_social": "FEDERACION MEDICA DE LA PROV (FEMEBA)",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1329",
+      "razon_social": "Círculo Médico de Esteban Echeverría",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1256",
+      "razon_social": "ACLIBA ZONA II",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1211",
+      "razon_social": "CIR. MED. DE MORON, HURLI",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1363",
+      "razon_social": "Circulo Medico San Isidro",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1197",
+      "razon_social": "PROCTER & GAMBLE AR S.R.L (P&G)",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1194",
+      "razon_social": "BBVA SEGUROS SOCIEDAD ANO",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1201",
+      "razon_social": "HERSO SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1198",
+      "razon_social": "CENTRO DE CULTURA E IDIOM",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1366",
+      "razon_social": "Ctro de Cultura e Idioma Japones",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1219",
+      "razon_social": "SOCIEDAD ODONTOLOGICA DE",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1223",
+      "razon_social": "OFTALMOLOGIA IBEROAMERICA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1222",
+      "razon_social": "ASOCIACION BONAERENSE DE ESTABLECIMIENTO P/ ATENCION DE SALUD MENTAL",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1226",
+      "razon_social": "JONES LANG LASALLE SRL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1217",
+      "razon_social": "AGREMIACION ODONTOLOGICA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1195",
+      "razon_social": "ORIGENES SEGUROS DE RETIR",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1224",
+      "razon_social": "SILVER CROSS AMERICA INC.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1207",
+      "razon_social": "AGREMIACION MEDICA PLATENSE",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1202",
+      "razon_social": "PLAN ROMBO S.A. DE AHORRO",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1205",
+      "razon_social": "MERCEDES-BENZ CAMIONES Y",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1214",
+      "razon_social": "FARMALINK SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1210",
+      "razon_social": "ACLIBA IV",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1216",
+      "razon_social": "COLEGIO DE KINESIOLOGOS DE LA PROVINCIA",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1209",
+      "razon_social": "FECLIBA",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1257",
+      "razon_social": "ACLIBA ZONA III",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1203",
+      "razon_social": "COMISION NACIONAL DE ENERGIA ATOMIC",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1200",
+      "razon_social": "FAURECIA SISTEMAS DE ESCA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1398",
+      "razon_social": "Conecctis ICT Services SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1399",
+      "razon_social": "CAHESA S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1400",
+      "razon_social": "DUPONT SPECIALITY PRODUCTS ARG",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1401",
+      "razon_social": "FRIGORIFICO GORINA SAIC.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1403",
+      "razon_social": "BOLSA DE CEREALES",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1404",
+      "razon_social": "NOVUS",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1405",
+      "razon_social": "ALLIANZ ARGENTINA COMPAÑIA DE SEGUROS",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1406",
+      "razon_social": "Obispado de San Miguel",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1407",
+      "razon_social": "Telmex",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1408",
+      "razon_social": "AG Servicios Farmaceuticos S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1410",
+      "razon_social": "Yamaha Plan de Ahorro",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1409",
+      "razon_social": "Yamaha Motor Argentina SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1411",
+      "razon_social": "Multidiagnóstico SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1412",
+      "razon_social": "Hospital Italiano de la Plata Asocaciación de Socorros mutuos y beneficencia",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1413",
+      "razon_social": "Centro Científico Tecnológico Conicet - Córdoba",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1414",
+      "razon_social": "Penta Security Solutions SRL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1415",
+      "razon_social": "Compañia Sud Americana de Dragados SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "713",
+      "razon_social": "AGIP (usa el mismo ID SAP que GCBA)",
+      "condicion_impositiva": ""
+    },
+    {
+      "cod_sap": "1229",
+      "razon_social": "NEUMÁTICOS DE AVANZADA SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1416",
+      "razon_social": "Pegia SRL",
+      "condicion_impositiva": "zpr0"
+    },
+    {
+      "cod_sap": "1417",
+      "razon_social": "Ariel Di Iorio",
+      "condicion_impositiva": "zpr0"
+    },
+    {
+      "cod_sap": "1422",
+      "razon_social": "Zulu Valores SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1423",
+      "razon_social": "Instituto Privado de Computación",
+      "condicion_impositiva": "zpr0"
+    },
+    {
+      "cod_sap": "1424",
+      "razon_social": "Piccinini y Asociados",
+      "condicion_impositiva": "zpr0"
+    },
+    {
+      "cod_sap": "1425",
+      "razon_social": "Latin Media Service SRL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1427",
+      "razon_social": "Reginald Lee SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1428",
+      "razon_social": "Mercado Libre S.R.L",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1430",
+      "razon_social": "Expeditors SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1431",
+      "razon_social": "Jorge F. Liguori y Asociados SRL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1432",
+      "razon_social": "Monteoliva Bibiana Patricia",
+      "condicion_impositiva": ""
+    },
+    {
+      "cod_sap": "1433",
+      "razon_social": "Leader Entertaiment SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1292",
+      "razon_social": "AXEL VERSTRAETEN",
+      "condicion_impositiva": ""
+    },
+    {
+      "cod_sap": "1293",
+      "razon_social": "RICARDO FERRARIO",
+      "condicion_impositiva": ""
+    },
+    {
+      "cod_sap": "1294",
+      "razon_social": "NATALIA TAGLIACOZZO",
+      "condicion_impositiva": ""
+    },
+    {
+      "cod_sap": "1302",
+      "razon_social": "Sabrina Lopez",
+      "condicion_impositiva": ""
+    },
+    {
+      "cod_sap": "1295",
+      "razon_social": "NICANOR ESTRADA",
+      "condicion_impositiva": ""
+    },
+    {
+      "cod_sap": "1296",
+      "razon_social": "ALEJANDRO INFANTE",
+      "condicion_impositiva": ""
+    },
+    {
+      "cod_sap": "1297",
+      "razon_social": "JULIO AIZENCHER",
+      "condicion_impositiva": ""
+    },
+    {
+      "cod_sap": "1298",
+      "razon_social": "ANDREYNA PEREYRO",
+      "condicion_impositiva": ""
+    },
+    {
+      "cod_sap": "1311",
+      "razon_social": "VALERIA ROMERO",
+      "condicion_impositiva": ""
+    },
+    {
+      "cod_sap": "1225",
+      "razon_social": "CHEVROLET SOCIEDAD ANONIM",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1204",
+      "razon_social": "VINCI CONSTRUCTION GRANDS",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1225",
+      "razon_social": "Circulo Medico de Lomas de Zamora",
+      "condicion_impositiva": ""
+    },
+    {
+      "cod_sap": "1213",
+      "razon_social": "ASOCIACION MEDICA DE ALMIRANTE BROWN",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1225",
+      "razon_social": "ABELLO ANTONIO",
+      "condicion_impositiva": ""
+    },
+    {
+      "cod_sap": "1230",
+      "razon_social": "ARIZMENDI COMPUTOS S A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1258",
+      "razon_social": "VOESTALPINE HIGH PERFORMA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1231",
+      "razon_social": "FECOVITA FEDERACION DE CO",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1232",
+      "razon_social": "ENERSYS AR SOCIEDAD ANONI",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1233",
+      "razon_social": "ANSA SECURITY S.A.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1234",
+      "razon_social": "COL. PROFESIONAL DE CORRE",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1259",
+      "razon_social": "ASOCIACION ARGENTINA DE C",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1372",
+      "razon_social": "Clara Regunaga",
+      "condicion_impositiva": ""
+    },
+    {
+      "cod_sap": "1373",
+      "razon_social": "Lucas Bonvino",
+      "condicion_impositiva": ""
+    },
+    {
+      "cod_sap": "1374",
+      "razon_social": "Hector Antola",
+      "condicion_impositiva": ""
+    },
+    {
+      "cod_sap": "1375",
+      "razon_social": "Roberto Favero",
+      "condicion_impositiva": ""
+    },
+    {
+      "cod_sap": "1376",
+      "razon_social": "Belen Bassan",
+      "condicion_impositiva": ""
+    },
+    {
+      "cod_sap": "1377",
+      "razon_social": "Vanesa seijas",
+      "condicion_impositiva": ""
+    },
+    {
+      "cod_sap": "1378",
+      "razon_social": "Mariano rozenblum",
+      "condicion_impositiva": ""
+    },
+    {
+      "cod_sap": "1379",
+      "razon_social": "Maria belen Bassan",
+      "condicion_impositiva": ""
+    },
+    {
+      "cod_sap": "1381",
+      "razon_social": "Esteban Martinez",
+      "condicion_impositiva": ""
+    },
+    {
+      "cod_sap": "1380",
+      "razon_social": "Jorge Belfiore",
+      "condicion_impositiva": ""
+    },
+    {
+      "cod_sap": "1382",
+      "razon_social": "María Celia",
+      "condicion_impositiva": ""
+    },
+    {
+      "cod_sap": "1395",
+      "razon_social": "NIKONOROVA OXANA",
+      "condicion_impositiva": ""
+    },
+    {
+      "cod_sap": "1396",
+      "razon_social": "EDUARDO GERPE DUARTE",
+      "condicion_impositiva": ""
+    },
+    {
+      "cod_sap": "1397",
+      "razon_social": "MARIA AGUERREA",
+      "condicion_impositiva": ""
+    },
+    {
+      "cod_sap": "1355",
+      "razon_social": "Sanchez Maldonado Isabel",
+      "condicion_impositiva": ""
+    },
+    {
+      "cod_sap": "1443",
+      "razon_social": "NUTRISUR",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1435",
+      "razon_social": "Club Atlético River Plate AC",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1436",
+      "razon_social": "FV SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1437",
+      "razon_social": "PSV CONSULTORES Y ASOCIADOS S.R.L.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1516",
+      "razon_social": "SOLIS, ALEJANDRO MARTIN",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1507",
+      "razon_social": "ASOC ARG DE LOS ADVENTISTAS 7MO DÍA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1517",
+      "razon_social": "GRUPO SORGEN SEGURIDAD SRL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1511",
+      "razon_social": "LABORATORIO IMVI S.A",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1438",
+      "razon_social": "ANDRITZ FABRICS AND ROLLS",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1450",
+      "razon_social": "IDC ARGENTINA SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1442",
+      "razon_social": "LOPEZ PRESAS ALEJANDRO HECTOR",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1439",
+      "razon_social": "MORE TELEVISION SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1441",
+      "razon_social": "GEODIS",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1566",
+      "razon_social": "COMPENSADORA ELECTRONICA SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1445",
+      "razon_social": "FIDUS SGR - FID AVAL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1451",
+      "razon_social": "ALDAO HERMANOS EN FORMACION SRL",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1527",
+      "razon_social": "CAPRODI",
+      "condicion_impositiva": "ZPR2"
+    },
+    {
+      "cod_sap": "1501",
+      "razon_social": "DROGUERIA DIMEC SRL",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1576",
+      "razon_social": "FRANQUICIADORA GASTRONOMICA SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1583",
+      "razon_social": "GALENO ARGENTINA SA -Medios",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1577",
+      "razon_social": "SOCMA AMERICANA SA",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1440",
+      "razon_social": "BHP CHILE INC.",
+      "condicion_impositiva": "ZPR0"
+    },
+    {
+      "cod_sap": "1561",
+      "razon_social": "DT LOGISTICA SA",
+      "condicion_impositiva": "ZPR0"
+    }
+  ]
 }
