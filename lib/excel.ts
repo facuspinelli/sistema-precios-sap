@@ -1,6 +1,6 @@
 "use client";
 
-import XLSX from "xlsx";
+import { read, utils } from "xlsx";
 
 export type ExcelRow = Record<string, unknown>;
 
@@ -54,7 +54,7 @@ export function leerExcel(
   buffer: ArrayBuffer
 ): ExcelRow[] {
 
-  const workbook = XLSX.read(buffer, {
+  const workbook = read(buffer, {
     type: "array",
     cellDates: true,
   });
@@ -77,12 +77,8 @@ export function leerExcel(
     );
   }
 
-  /*
-   * Leemos como matriz para poder detectar
-   * la cabecera real del reporte SAP.
-   */
   const matriz =
-    XLSX.utils.sheet_to_json(
+    utils.sheet_to_json(
       worksheet,
       {
         header: 1,
@@ -97,10 +93,6 @@ export function leerExcel(
     );
   }
 
-  /*
-   * Buscamos la fila que contiene las
-   * columnas principales del reporte SAP.
-   */
   let indiceCabecera = -1;
   let cabecera: string[] = [];
 
@@ -126,25 +118,12 @@ export function leerExcel(
     }
   }
 
-  /*
-   * Si no encontramos la cabecera SAP,
-   * usamos la primera fila.
-   */
   if (indiceCabecera === -1) {
     indiceCabecera = 0;
     cabecera =
       dividirFila(matriz[0]);
   }
 
-  /*
-   * Evitamos nombres de columnas duplicados.
-   *
-   * Ejemplo:
-   * Cliente
-   * Cliente_2
-   * Material
-   * Material_2
-   */
   const usados: Record<
     string,
     number
@@ -160,10 +139,6 @@ export function leerExcel(
 
   const resultados: ExcelRow[] = [];
 
-  /*
-   * Procesamos las filas posteriores
-   * a la cabecera.
-   */
   for (
     let i = indiceCabecera + 1;
     i < matriz.length;
@@ -172,9 +147,6 @@ export function leerExcel(
     const fila =
       dividirFila(matriz[i]);
 
-    /*
-     * Ignoramos filas completamente vacías.
-     */
     const tieneDatos =
       fila.some(
         (valor) =>
@@ -196,15 +168,8 @@ export function leerExcel(
         fila[j] ?? "";
     }
 
-    /*
-     * Solo agregamos registros que tengan
-     * algún dato útil.
-     */
-    const valores =
-      Object.values(registro);
-
     if (
-      valores.some(
+      Object.values(registro).some(
         (valor) =>
           limpiar(valor) !== ""
       )
