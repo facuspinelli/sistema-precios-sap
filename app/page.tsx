@@ -419,7 +419,19 @@ export default function Home() {
               Próximamente
             </small>
           </button>
-
+<button
+  className={
+    vista === "consulta"
+      ? "menuItem active"
+      : "menuItem"
+  }
+  onClick={() =>
+    setVista("consulta")
+  }
+>
+  <span>⌕</span>
+  Consulta
+</button>
 
           <button className="menuItem disabled">
             <span>▣</span>
