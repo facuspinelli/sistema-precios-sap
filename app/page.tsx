@@ -23,9 +23,7 @@ export default function Home() {
   ) {
     const file = event.target.files?.[0];
 
-    if (!file) {
-      return;
-    }
+    if (!file) return;
 
     setArchivo(file.name);
     setCargando(true);
@@ -78,13 +76,6 @@ export default function Home() {
         r.condicionExcel === "ZPR2"
     ).length;
 
-  const materialesNoEncontrados =
-    resultados.filter(
-      (r) =>
-        r.material &&
-        !r.materialEncontrado
-    ).length;
-
   const errores =
     resultados.filter(
       (r) => r.estado === "ERROR"
@@ -94,6 +85,20 @@ export default function Home() {
     resultados.filter(
       (r) => r.estado === "ALERTA"
     ).length;
+
+  const materialesNoEncontrados =
+    resultados.filter(
+      (r) =>
+        r.material &&
+        !r.materialEncontrado
+    ).length;
+
+  const importeTotal =
+    resultados.reduce(
+      (total, r) =>
+        total + r.importeFinal,
+      0
+    );
 
   return (
     <main
@@ -108,7 +113,7 @@ export default function Home() {
     >
       <div
         style={{
-          maxWidth: "1400px",
+          maxWidth: "1500px",
           margin: "0 auto",
         }}
       >
@@ -132,8 +137,8 @@ export default function Home() {
               margin: 0,
             }}
           >
-            Validación y análisis automático
-            de precios, clientes y materiales.
+            Validación y análisis de
+            precios, clientes y materiales.
           </p>
         </header>
 
@@ -146,23 +151,9 @@ export default function Home() {
             border: "1px solid #e4e7ec",
           }}
         >
-          <h2
-            style={{
-              marginTop: 0,
-              fontSize: "20px",
-            }}
-          >
+          <h2>
             Cargar Excel mensual
           </h2>
-
-          <p
-            style={{
-              color: "#667085",
-            }}
-          >
-            Subí el archivo mensual de SAP
-            (.xls o .xlsx).
-          </p>
 
           <input
             type="file"
@@ -172,25 +163,22 @@ export default function Home() {
 
           {archivo && (
             <p>
-              Archivo seleccionado:{" "}
+              Archivo:{" "}
               <strong>{archivo}</strong>
             </p>
           )}
 
           {cargando && (
             <p>
-              ⏳ Procesando Excel...
+              ⏳ Procesando...
             </p>
           )}
 
           {error && (
             <div
               style={{
-                marginTop: "15px",
                 padding: "15px",
                 background: "#fff1f0",
-                border:
-                  "1px solid #ffccc7",
                 borderRadius: "8px",
                 color: "#cf1322",
               }}
@@ -206,7 +194,7 @@ export default function Home() {
               style={{
                 display: "grid",
                 gridTemplateColumns:
-                  "repeat(4, 1fr)",
+                  "repeat(5, 1fr)",
                 gap: "15px",
                 marginBottom: "25px",
               }}
@@ -231,6 +219,12 @@ export default function Home() {
                 valor={
                   resumen.filasConPB00
                 }
+              />
+
+              <Tarjeta
+                titulo="Importe total"
+                valor={importeTotal}
+                dinero
               />
             </section>
 
@@ -269,12 +263,8 @@ export default function Home() {
                 border: "1px solid #e4e7ec",
               }}
             >
-              <h2
-                style={{
-                  marginTop: 0,
-                }}
-              >
-                Resultado del análisis
+              <h2>
+                Detalle de registros
               </h2>
 
               <div
@@ -287,7 +277,7 @@ export default function Home() {
                     width: "100%",
                     borderCollapse:
                       "collapse",
-                    fontSize: "14px",
+                    fontSize: "13px",
                   }}
                 >
                   <thead>
@@ -313,7 +303,7 @@ export default function Home() {
                       </th>
 
                       <th style={th}>
-                        Excel
+                        Condición
                       </th>
 
                       <th style={th}>
@@ -321,11 +311,27 @@ export default function Home() {
                       </th>
 
                       <th style={th}>
-                        Material
+                        Importe
                       </th>
 
                       <th style={th}>
                         PB00
+                      </th>
+
+                      <th style={th}>
+                        Importe final
+                      </th>
+
+                      <th style={th}>
+                        Moneda
+                      </th>
+
+                      <th style={th}>
+                        Por
+                      </th>
+
+                      <th style={th}>
+                        UM
                       </th>
 
                       <th style={th}>
@@ -341,88 +347,106 @@ export default function Home() {
                   <tbody>
                     {resultados.map(
                       (
-                        resultado: ResultadoValidacion
+                        r: ResultadoValidacion
                       ) => (
                         <tr
-                          key={
-                            resultado.fila
-                          }
+                          key={r.fila}
                         >
                           <td style={td}>
-                            {
-                              resultado.fila
-                            }
+                            {r.fila}
                           </td>
 
                           <td style={td}>
-                            {
-                              resultado.cliente
-                            }
+                            {r.cliente ||
+                              "-"}
                           </td>
 
                           <td style={td}>
-                            {
-                              resultado.razonSocial ||
-                              "-"
-                            }
+                            {r.razonSocial ||
+                              "-"}
                           </td>
 
                           <td style={td}>
-                            {
-                              resultado.material ||
-                              "-"
-                            }
+                            {r.material ||
+                              "-"}
                           </td>
 
                           <td style={td}>
-                            {
-                              resultado
-                                .descripcionMaterial ||
-                              "-"
-                            }
+                            {r.descripcionMaterial ||
+                              "-"}
                           </td>
 
                           <td style={td}>
-                            {
-                              resultado
-                                .condicionExcel ||
-                              "-"
-                            }
+                            {r.condicionExcel ||
+                              "-"}
                           </td>
 
                           <td style={td}>
-                            {
-                              resultado
-                                .condicionEsperada ||
-                              "-"
-                            }
+                            {r.condicionEsperada ||
+                              "-"}
                           </td>
 
                           <td style={td}>
-                            {resultado.materialEncontrado
-                              ? "🟢 OK"
-                              : "🔴 No existe"}
+                            {r.importe.toLocaleString(
+                              "es-AR",
+                              {
+                                minimumFractionDigits: 2,
+                              }
+                            )}
                           </td>
 
                           <td style={td}>
-                            {resultado.tienePB00
-                              ? "⚠️ Sí"
+                            {r.importePB00
+                              ? r.importePB00.toLocaleString(
+                                  "es-AR",
+                                  {
+                                    minimumFractionDigits:
+                                      2,
+                                  }
+                                )
                               : "-"}
+                          </td>
+
+                          <td
+                            style={{
+                              ...td,
+                              fontWeight: 700,
+                            }}
+                          >
+                            {r.importeFinal.toLocaleString(
+                              "es-AR",
+                              {
+                                minimumFractionDigits: 2,
+                              }
+                            )}
+                          </td>
+
+                          <td style={td}>
+                            {r.moneda ||
+                              "-"}
+                          </td>
+
+                          <td style={td}>
+                            {r.por || "-"}
+                          </td>
+
+                          <td style={td}>
+                            {r.unidadMedida ||
+                              "-"}
                           </td>
 
                           <td style={td}>
                             <Estado
                               estado={
-                                resultado.estado
+                                r.estado
                               }
                             />
                           </td>
 
                           <td style={td}>
-                            {resultado
-                              .observaciones
+                            {r.observaciones
                               .length
-                              ? resultado.observaciones.join(
+                              ? r.observaciones.join(
                                   " "
                                 )
                               : "-"}
@@ -444,9 +468,11 @@ export default function Home() {
 function Tarjeta({
   titulo,
   valor,
+  dinero = false,
 }: {
   titulo: string;
   valor: number;
+  dinero?: boolean;
 }) {
   return (
     <div
@@ -454,8 +480,7 @@ function Tarjeta({
         background: "white",
         borderRadius: "14px",
         padding: "22px",
-        border:
-          "1px solid #e4e7ec",
+        border: "1px solid #e4e7ec",
       }}
     >
       <div
@@ -470,11 +495,18 @@ function Tarjeta({
 
       <div
         style={{
-          fontSize: "30px",
+          fontSize: "25px",
           fontWeight: 700,
         }}
       >
-        {valor}
+        {dinero
+          ? valor.toLocaleString(
+              "es-AR",
+              {
+                minimumFractionDigits: 2,
+              }
+            )
+          : valor}
       </div>
     </div>
   );
@@ -512,4 +544,5 @@ const td: React.CSSProperties = {
   borderBottom:
     "1px solid #eef0f3",
   verticalAlign: "top",
+  whiteSpace: "nowrap",
 };
