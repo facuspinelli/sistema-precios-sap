@@ -12,41 +12,13 @@ import {
 } from "../lib/analisis";
 
 export default function Home() {
-  const [archivo, setArchivo] = useState<File | null>(null);
+  const [archivo, setArchivo] = useState("");
   const [cargando, setCargando] = useState(false);
   const [error, setError] = useState("");
-  const [resultado, setResultado] =
+  const [resumen, setResumen] =
     useState<ResumenAnalisis | null>(null);
 
-  async function procesarExcel(file: File) {
-    setCargando(true);
-    setError("");
-    setResultado(null);
-
-    try {
-      const buffer = await file.arrayBuffer();
-
-      const filas = leerExcel(buffer);
-
-      const resultados: ResultadoValidacion[] =
-        validarExcel(filas);
-
-      const resumen =
-        analizarResultados(resultados);
-
-      setResultado(resumen);
-    } catch (error) {
-      console.error(error);
-
-      setError(
-        "No se pudo procesar el archivo Excel. Verificá que sea un archivo válido."
-      );
-    } finally {
-      setCargando(false);
-    }
-  }
-
-  function seleccionarArchivo(
+  async function procesarArchivo(
     event: React.ChangeEvent<HTMLInputElement>
   ) {
     const file = event.target.files?.[0];
@@ -55,207 +27,255 @@ export default function Home() {
       return;
     }
 
-    setArchivo(file);
-    procesarExcel(file);
+    setArchivo(file.name);
+    setCargando(true);
+    setError("");
+    setResumen(null);
+
+    try {
+      const buffer = await file.arrayBuffer();
+
+      const filas = leerExcel(buffer);
+
+      if (!filas.length) {
+        throw new Error(
+          "El Excel no contiene registros."
+        );
+      }
+
+      const resultados =
+        validarExcel(filas);
+
+      const analisis =
+        analizarResultados(resultados);
+
+      setResumen(analisis);
+    } catch (err) {
+      console.error(err);
+
+      setError(
+        err instanceof Error
+          ? err.message
+          : "No se pudo procesar el Excel."
+      );
+    } finally {
+      setCargando(false);
+    }
   }
+
+  const resultados =
+    resumen?.resultados || [];
+
+  const totalZPR0 =
+    resultados.filter(
+      (r) =>
+        r.condicionExcel === "ZPR0"
+    ).length;
+
+  const totalZPR2 =
+    resultados.filter(
+      (r) =>
+        r.condicionExcel === "ZPR2"
+    ).length;
+
+  const materialesNoEncontrados =
+    resultados.filter(
+      (r) =>
+        r.material &&
+        !r.materialEncontrado
+    ).length;
+
+  const errores =
+    resultados.filter(
+      (r) => r.estado === "ERROR"
+    ).length;
+
+  const alertas =
+    resultados.filter(
+      (r) => r.estado === "ALERTA"
+    ).length;
 
   return (
     <main
       style={{
         minHeight: "100vh",
-        background: "#f4f6f8",
+        background: "#f5f7fb",
         padding: "40px",
-        fontFamily: "Arial, sans-serif",
+        fontFamily:
+          "Arial, Helvetica, sans-serif",
+        color: "#172033",
       }}
     >
       <div
         style={{
-          maxWidth: "1100px",
+          maxWidth: "1400px",
           margin: "0 auto",
         }}
       >
-        <h1
+        <header
           style={{
-            margin: 0,
-            fontSize: "32px",
-            color: "#172033",
+            marginBottom: "30px",
           }}
         >
-          Sistema de Análisis de Precios
-        </h1>
+          <h1
+            style={{
+              fontSize: "32px",
+              marginBottom: "8px",
+            }}
+          >
+            Sistema de Precios SAP
+          </h1>
 
-        <p
-          style={{
-            color: "#667085",
-            fontSize: "16px",
-            marginTop: "8px",
-          }}
-        >
-          Análisis automático de archivos Excel
-        </p>
+          <p
+            style={{
+              color: "#667085",
+              margin: 0,
+            }}
+          >
+            Validación y análisis automático
+            de precios, clientes y materiales.
+          </p>
+        </header>
 
         <section
           style={{
             background: "white",
-            borderRadius: "16px",
-            padding: "30px",
-            marginTop: "30px",
-            boxShadow:
-              "0 4px 20px rgba(0,0,0,0.06)",
+            borderRadius: "14px",
+            padding: "25px",
+            marginBottom: "25px",
+            border: "1px solid #e4e7ec",
           }}
         >
           <h2
             style={{
               marginTop: 0,
-              color: "#172033",
+              fontSize: "20px",
             }}
           >
-            Cargar Excel
+            Cargar Excel mensual
           </h2>
 
-          <p style={{ color: "#667085" }}>
-            Seleccioná un archivo Excel para iniciar
-            el análisis.
+          <p
+            style={{
+              color: "#667085",
+            }}
+          >
+            Subí el archivo mensual de SAP
+            (.xls o .xlsx).
           </p>
 
           <input
             type="file"
-            accept=".xlsx,.xls"
-            onChange={seleccionarArchivo}
+            accept=".xls,.xlsx"
+            onChange={procesarArchivo}
           />
 
           {archivo && (
-            <div
-              style={{
-                marginTop: "20px",
-                padding: "15px",
-                background: "#f2f4f7",
-                borderRadius: "10px",
-              }}
-            >
-              <strong>Archivo:</strong>{" "}
-              {archivo.name}
-            </div>
+            <p>
+              Archivo seleccionado:{" "}
+              <strong>{archivo}</strong>
+            </p>
           )}
 
           {cargando && (
-            <div
-              style={{
-                marginTop: "20px",
-                padding: "15px",
-                borderRadius: "10px",
-                background: "#eef4ff",
-              }}
-            >
-              Procesando Excel...
-            </div>
+            <p>
+              ⏳ Procesando Excel...
+            </p>
           )}
 
           {error && (
             <div
               style={{
-                marginTop: "20px",
+                marginTop: "15px",
                 padding: "15px",
-                borderRadius: "10px",
                 background: "#fff1f0",
-                color: "#b42318",
+                border:
+                  "1px solid #ffccc7",
+                borderRadius: "8px",
+                color: "#cf1322",
               }}
             >
-              {error}
+              ❌ {error}
             </div>
           )}
         </section>
 
-        {resultado && (
+        {resumen && (
           <>
             <section
               style={{
                 display: "grid",
                 gridTemplateColumns:
                   "repeat(4, 1fr)",
-                gap: "20px",
-                marginTop: "25px",
+                gap: "15px",
+                marginBottom: "25px",
               }}
             >
-              <div
-                style={{
-                  background: "white",
-                  padding: "25px",
-                  borderRadius: "14px",
-                }}
-              >
-                <h3>Total filas</h3>
+              <Tarjeta
+                titulo="Registros"
+                valor={resumen.totalFilas}
+              />
 
-                <strong
-                  style={{ fontSize: "28px" }}
-                >
-                  {resultado.totalFilas}
-                </strong>
-              </div>
+              <Tarjeta
+                titulo="ZPR0"
+                valor={totalZPR0}
+              />
 
-              <div
-                style={{
-                  background: "white",
-                  padding: "25px",
-                  borderRadius: "14px",
-                }}
-              >
-                <h3>Con PB00</h3>
+              <Tarjeta
+                titulo="ZPR2"
+                valor={totalZPR2}
+              />
 
-                <strong
-                  style={{ fontSize: "28px" }}
-                >
-                  {resultado.filasConPB00}
-                </strong>
-              </div>
+              <Tarjeta
+                titulo="PB00"
+                valor={
+                  resumen.filasConPB00
+                }
+              />
+            </section>
 
-              <div
-                style={{
-                  background: "white",
-                  padding: "25px",
-                  borderRadius: "14px",
-                }}
-              >
-                <h3>Sin PB00</h3>
+            <section
+              style={{
+                display: "grid",
+                gridTemplateColumns:
+                  "repeat(3, 1fr)",
+                gap: "15px",
+                marginBottom: "25px",
+              }}
+            >
+              <Tarjeta
+                titulo="Alertas"
+                valor={alertas}
+              />
 
-                <strong
-                  style={{ fontSize: "28px" }}
-                >
-                  {resultado.filasSinPB00}
-                </strong>
-              </div>
+              <Tarjeta
+                titulo="Errores"
+                valor={errores}
+              />
 
-              <div
-                style={{
-                  background: "white",
-                  padding: "25px",
-                  borderRadius: "14px",
-                }}
-              >
-                <h3>% PB00</h3>
-
-                <strong
-                  style={{ fontSize: "28px" }}
-                >
-                  {resultado.porcentajePB00.toFixed(
-                    2
-                  )}
-                  %
-                </strong>
-              </div>
+              <Tarjeta
+                titulo="Materiales no encontrados"
+                valor={
+                  materialesNoEncontrados
+                }
+              />
             </section>
 
             <section
               style={{
                 background: "white",
-                borderRadius: "16px",
-                padding: "30px",
-                marginTop: "25px",
-                boxShadow:
-                  "0 4px 20px rgba(0,0,0,0.06)",
+                borderRadius: "14px",
+                padding: "25px",
+                border: "1px solid #e4e7ec",
               }}
             >
-              <h2>Detalle del análisis</h2>
+              <h2
+                style={{
+                  marginTop: 0,
+                }}
+              >
+                Resultado del análisis
+              </h2>
 
               <div
                 style={{
@@ -267,84 +287,145 @@ export default function Home() {
                     width: "100%",
                     borderCollapse:
                       "collapse",
+                    fontSize: "14px",
                   }}
                 >
                   <thead>
                     <tr>
-                      <th
-                        style={{
-                          textAlign: "left",
-                          padding: "12px",
-                          borderBottom:
-                            "1px solid #ddd",
-                        }}
-                      >
+                      <th style={th}>
                         Fila
                       </th>
 
-                      <th
-                        style={{
-                          textAlign: "left",
-                          padding: "12px",
-                          borderBottom:
-                            "1px solid #ddd",
-                        }}
-                      >
+                      <th style={th}>
+                        Cliente
+                      </th>
+
+                      <th style={th}>
+                        Razón social
+                      </th>
+
+                      <th style={th}>
+                        Material
+                      </th>
+
+                      <th style={th}>
+                        Descripción
+                      </th>
+
+                      <th style={th}>
+                        Excel
+                      </th>
+
+                      <th style={th}>
+                        Esperada
+                      </th>
+
+                      <th style={th}>
+                        Material
+                      </th>
+
+                      <th style={th}>
                         PB00
                       </th>
 
-                      <th
-                        style={{
-                          textAlign: "left",
-                          padding: "12px",
-                          borderBottom:
-                            "1px solid #ddd",
-                        }}
-                      >
+                      <th style={th}>
+                        Estado
+                      </th>
+
+                      <th style={th}>
                         Observaciones
                       </th>
                     </tr>
                   </thead>
 
                   <tbody>
-                    {resultado.resultados.map(
-                      (fila) => (
-                        <tr key={fila.fila}>
-                          <td
-                            style={{
-                              padding: "12px",
-                              borderBottom:
-                                "1px solid #eee",
-                            }}
-                          >
-                            {fila.fila}
+                    {resultados.map(
+                      (
+                        resultado: ResultadoValidacion
+                      ) => (
+                        <tr
+                          key={
+                            resultado.fila
+                          }
+                        >
+                          <td style={td}>
+                            {
+                              resultado.fila
+                            }
                           </td>
 
-                          <td
-                            style={{
-                              padding: "12px",
-                              borderBottom:
-                                "1px solid #eee",
-                            }}
-                          >
-                            {fila.tienePB00
-                              ? "Sí"
-                              : "No"}
+                          <td style={td}>
+                            {
+                              resultado.cliente
+                            }
                           </td>
 
-                          <td
-                            style={{
-                              padding: "12px",
-                              borderBottom:
-                                "1px solid #eee",
-                            }}
-                          >
-                            {fila.observaciones
-                              .length > 0
-                              ? fila.observaciones.join(
+                          <td style={td}>
+                            {
+                              resultado.razonSocial ||
+                              "-"
+                            }
+                          </td>
+
+                          <td style={td}>
+                            {
+                              resultado.material ||
+                              "-"
+                            }
+                          </td>
+
+                          <td style={td}>
+                            {
+                              resultado
+                                .descripcionMaterial ||
+                              "-"
+                            }
+                          </td>
+
+                          <td style={td}>
+                            {
+                              resultado
+                                .condicionExcel ||
+                              "-"
+                            }
+                          </td>
+
+                          <td style={td}>
+                            {
+                              resultado
+                                .condicionEsperada ||
+                              "-"
+                            }
+                          </td>
+
+                          <td style={td}>
+                            {resultado.materialEncontrado
+                              ? "🟢 OK"
+                              : "🔴 No existe"}
+                          </td>
+
+                          <td style={td}>
+                            {resultado.tienePB00
+                              ? "⚠️ Sí"
+                              : "-"}
+                          </td>
+
+                          <td style={td}>
+                            <Estado
+                              estado={
+                                resultado.estado
+                              }
+                            />
+                          </td>
+
+                          <td style={td}>
+                            {resultado
+                              .observaciones
+                              .length
+                              ? resultado.observaciones.join(
                                   " "
                                 )
-                              : "Sin observaciones"}
+                              : "-"}
                           </td>
                         </tr>
                       )
@@ -359,3 +440,76 @@ export default function Home() {
     </main>
   );
 }
+
+function Tarjeta({
+  titulo,
+  valor,
+}: {
+  titulo: string;
+  valor: number;
+}) {
+  return (
+    <div
+      style={{
+        background: "white",
+        borderRadius: "14px",
+        padding: "22px",
+        border:
+          "1px solid #e4e7ec",
+      }}
+    >
+      <div
+        style={{
+          color: "#667085",
+          fontSize: "14px",
+          marginBottom: "8px",
+        }}
+      >
+        {titulo}
+      </div>
+
+      <div
+        style={{
+          fontSize: "30px",
+          fontWeight: 700,
+        }}
+      >
+        {valor}
+      </div>
+    </div>
+  );
+}
+
+function Estado({
+  estado,
+}: {
+  estado:
+    | "OK"
+    | "ALERTA"
+    | "ERROR";
+}) {
+  if (estado === "OK") {
+    return "🟢 OK";
+  }
+
+  if (estado === "ALERTA") {
+    return "🟠 ALERTA";
+  }
+
+  return "🔴 ERROR";
+}
+
+const th: React.CSSProperties = {
+  textAlign: "left",
+  padding: "12px",
+  borderBottom:
+    "2px solid #e4e7ec",
+  whiteSpace: "nowrap",
+};
+
+const td: React.CSSProperties = {
+  padding: "12px",
+  borderBottom:
+    "1px solid #eef0f3",
+  verticalAlign: "top",
+};
