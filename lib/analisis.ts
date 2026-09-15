@@ -1,5 +1,7 @@
 import { ResultadoValidacion } from "./validador";
 
+// Este valor NO es el porcentaje de diferencia. Es solamente el umbral
+// que usamos para marcar una diferencia como señal comercial.
 export const UMBRAL_OPORTUNIDAD = 15;
 
 export type SeleccionAnalisis = {
@@ -26,6 +28,7 @@ export type ComparacionCliente = {
   importePromedio: number;
   registros: number;
   materiales: number;
+  referenciaOtros: number;
   diferenciaVsPromedioOtros: number;
   porcentajeVsPromedioOtros: number;
   vecesVsPromedioOtros: number;
@@ -50,6 +53,12 @@ export type ComparacionFamiliaCliente = {
   materiales: number;
   importeTotal: number;
   importePromedio: number;
+  referenciaOtros: number;
+  diferenciaVsOtros: number;
+  porcentajeVsOtros: number;
+  vecesVsOtros: number;
+  posicion: number;
+  materialesComparables: number;
 };
 
 export type ResultadoComercial = {
@@ -136,6 +145,7 @@ function promedio(nums: number[]) {
   return nums.length ? nums.reduce((a, b) => a + b, 0) / nums.length : 0;
 }
 
+/** Porcentaje REAL de diferencia contra una referencia. Ej.: 10 vs 5 = +100%. */
 function porcentajeVs(valor: number, referencia: number) {
   return referencia ? ((valor - referencia) / referencia) * 100 : 0;
 }
@@ -160,41 +170,46 @@ function construirConclusion(
   if (altas.length) {
     const o = altas[0];
     conclusiones.push(
-      `${o.razonSocial} presenta un importe de $ ${o.importe.toLocaleString("es-AR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} para el material ${o.material}, un ${o.porcentaje.toFixed(1)}% por encima de la referencia de los otros clientes analizados. Esto constituye una señal para revisar la posición comercial y la posibilidad de una adecuación de precio.`,
+      `${o.razonSocial} presenta un importe de ${formatearImporte(o.importe)} para el material ${o.material}, un ${o.porcentaje.toFixed(1)}% por encima de la referencia de los otros clientes analizados. Esto constituye una señal para revisar la posición comercial y la posibilidad de una adecuación de precio.`,
     );
   }
 
   if (bajas.length) {
     const o = bajas[0];
     conclusiones.push(
-      `${o.razonSocial} presenta un importe de $ ${o.importe.toLocaleString("es-AR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} para el material ${o.material}, un ${Math.abs(o.porcentaje).toFixed(1)}% por debajo de la referencia. Puede ser conveniente revisar si existe margen para una actualización comercial.`,
+      `${o.razonSocial} presenta un importe de ${formatearImporte(o.importe)} para el material ${o.material}, un ${Math.abs(o.porcentaje).toFixed(1)}% por debajo de la referencia. Puede ser conveniente revisar si existe margen para una actualización comercial.`,
     );
   }
 
   if (familiaMayor) {
     conclusiones.push(
-      `La familia ${familiaMayor.familia} concentra el mayor importe dentro del universo analizado, con $ ${familiaMayor.importeTotal.toLocaleString("es-AR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}.`,
+      `La familia ${familiaMayor.familia} concentra el mayor importe dentro del universo analizado, con ${formatearImporte(familiaMayor.importeTotal)}.`,
     );
   }
 
   if (!oportunidades.length) {
-    conclusiones.push(`No se detectaron diferencias superiores al ±${UMBRAL_OPORTUNIDAD}% entre clientes para materiales compartidos dentro del universo seleccionado.`);
+    conclusiones.push(`No se detectaron diferencias que superen el umbral del ±${UMBRAL_OPORTUNIDAD}% entre clientes para materiales compartidos dentro del universo seleccionado.`);
   }
 
   const ejecutiva = oportunidades.length
-    ? `El universo seleccionado presenta ${oportunidades.length} señal(es) comercial(es) que superan el umbral del ±${UMBRAL_OPORTUNIDAD}%. La comparación se realizó por material y únicamente con registros validados según las bases maestras.`
-    : `El universo seleccionado no presenta señales de precio que superen el umbral del ±${UMBRAL_OPORTUNIDAD}% entre clientes para materiales compartidos. La comparación se realizó únicamente sobre registros validados.`;
+    ? `El universo seleccionado presenta ${oportunidades.length} señal(es) comercial(es) que superan el umbral del ±${UMBRAL_OPORTUNIDAD}%. El porcentaje mostrado es la diferencia real entre el importe del cliente y la referencia de los otros clientes, calculada únicamente dentro del universo seleccionado.`
+    : `El universo seleccionado no presenta señales de precio que superen el umbral del ±${UMBRAL_OPORTUNIDAD}% entre clientes para materiales compartidos. Los porcentajes se calculan únicamente con los registros incluidos en el universo seleccionado.`;
 
   return { ejecutiva, conclusiones };
 }
 
+function formatearImporte(n: number) {
+  return `$ ${n.toLocaleString("es-AR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+}
+
 export function realizarAnalisis(resultados: ResultadoValidacion[]): ResultadoComercial {
+  // IMPORTANTE: el análisis jamás mira el Excel completo acá.
+  // Recibe solamente el universo que ya fue filtrado por el usuario.
   const universo = resultados.filter((r) => r.incluidoEnAnalisis && Number.isFinite(r.importeFinal));
   const importeTotal = universo.reduce((s, r) => s + r.importeFinal, 0);
 
   const familiasMap = new Map<string, ResultadoValidacion[]>();
   const materialesMap = new Map<string, ResultadoValidacion[]>();
-  const familiaClienteMap = new Map<string, ResultadoValidacion[]>();
 
   for (const r of universo) {
     const familia = r.familia || "SIN FAMILIA";
@@ -204,10 +219,6 @@ export function realizarAnalisis(resultados: ResultadoValidacion[]): ResultadoCo
     const materialKey = `${familia}|||${r.material}`;
     if (!materialesMap.has(materialKey)) materialesMap.set(materialKey, []);
     materialesMap.get(materialKey)!.push(r);
-
-    const familiaClienteKey = `${familia}|||${r.razonSocial}`;
-    if (!familiaClienteMap.has(familiaClienteKey)) familiaClienteMap.set(familiaClienteKey, []);
-    familiaClienteMap.get(familiaClienteKey)!.push(r);
   }
 
   const gruposFamilia = Array.from(familiasMap.entries()).map(([familia, rows]) => ({
@@ -218,18 +229,6 @@ export function realizarAnalisis(resultados: ResultadoValidacion[]): ResultadoCo
     maximo: Math.max(...rows.map((r) => r.importeFinal)),
     importeTotal: rows.reduce((s, r) => s + r.importeFinal, 0),
   })).sort((a, b) => b.importeTotal - a.importeTotal);
-
-  const gruposFamiliaCliente: ComparacionFamiliaCliente[] = Array.from(familiaClienteMap.entries()).map(([key, rows]) => {
-    const [familia, cliente] = key.split("|||");
-    return {
-      familia,
-      cliente,
-      registros: rows.length,
-      materiales: new Set(rows.map((r) => r.material)).size,
-      importeTotal: rows.reduce((s, r) => s + r.importeFinal, 0),
-      importePromedio: promedio(rows.map((r) => r.importeFinal)),
-    };
-  }).sort((a, b) => a.familia.localeCompare(b.familia) || b.importePromedio - a.importePromedio);
 
   const gruposMaterial: ComparacionGrupo[] = Array.from(materialesMap.entries()).map(([key, rows]) => {
     const [familia, material] = key.split("|||");
@@ -247,6 +246,7 @@ export function realizarAnalisis(resultados: ResultadoValidacion[]): ResultadoCo
       importePromedio: promedio(cr.map((r) => r.importeFinal)),
       registros: cr.length,
       materiales: new Set(cr.map((r) => r.material)).size,
+      referenciaOtros: 0,
       diferenciaVsPromedioOtros: 0,
       porcentajeVsPromedioOtros: 0,
       vecesVsPromedioOtros: 0,
@@ -256,11 +256,12 @@ export function realizarAnalisis(resultados: ResultadoValidacion[]): ResultadoCo
     raw.sort((a, b) => b.importePromedio - a.importePromedio);
     const clientes = raw.map((c, index) => {
       const otros = raw.filter((x) => x.cliente !== c.cliente).map((x) => x.importePromedio);
-      const ref = otros.length ? promedio(otros) : promedioGrupo;
-      const diferencia = c.importePromedio - ref;
-      const porcentaje = porcentajeVs(c.importePromedio, ref);
+      const ref = otros.length ? promedio(otros) : 0;
+      const diferencia = ref ? c.importePromedio - ref : 0;
+      const porcentaje = ref ? porcentajeVs(c.importePromedio, ref) : 0;
       return {
         ...c,
+        referenciaOtros: ref,
         diferenciaVsPromedioOtros: diferencia,
         porcentajeVsPromedioOtros: porcentaje,
         vecesVsPromedioOtros: ref ? c.importePromedio / ref : 0,
@@ -280,16 +281,73 @@ export function realizarAnalisis(resultados: ResultadoValidacion[]): ResultadoCo
     };
   }).sort((a, b) => b.promedio - a.promedio);
 
+  // Comparación de familia por cliente.
+  // Para que sea justa, el porcentaje de familia usa únicamente materiales
+  // que tienen al menos dos clientes dentro del universo seleccionado.
+  const gruposFamiliaCliente: ComparacionFamiliaCliente[] = [];
+  for (const familia of gruposFamilia) {
+    const materialesFamilia = gruposMaterial.filter((g) => g.familia === familia.familia && g.clientes.length >= 2);
+    const clientesFamilia = new Set<string>();
+    materialesFamilia.forEach((g) => g.clientes.forEach((c) => clientesFamilia.add(c.cliente)));
+
+    const baseRows = universo.filter((r) => r.familia === familia.familia);
+    for (const cliente of clientesFamilia) {
+      const rowsCliente = baseRows.filter((r) => r.razonSocial === cliente);
+      const comparables = materialesFamilia
+        .map((g) => {
+          const propio = g.clientes.find((c) => c.cliente === cliente);
+          if (!propio) return null;
+          const otros = g.clientes.filter((c) => c.cliente !== cliente);
+          if (!otros.length) return null;
+          return { propio: propio.importePromedio, referencia: promedio(otros.map((c) => c.importePromedio)) };
+        })
+        .filter(Boolean) as Array<{ propio: number; referencia: number }>;
+
+      const importePromedio = promedio(rowsCliente.map((r) => r.importeFinal));
+      const ref = promedio(comparables.map((x) => x.referencia));
+      const propioComparable = promedio(comparables.map((x) => x.propio));
+      const diferencia = ref ? propioComparable - ref : 0;
+      const porcentaje = ref ? porcentajeVs(propioComparable, ref) : 0;
+
+      gruposFamiliaCliente.push({
+        familia: familia.familia,
+        cliente,
+        registros: rowsCliente.length,
+        materiales: new Set(rowsCliente.map((r) => r.material)).size,
+        importeTotal: rowsCliente.reduce((s, r) => s + r.importeFinal, 0),
+        importePromedio,
+        referenciaOtros: ref,
+        diferenciaVsOtros: diferencia,
+        porcentajeVsOtros: porcentaje,
+        vecesVsOtros: ref ? propioComparable / ref : 0,
+        posicion: 0,
+        materialesComparables: comparables.length,
+      });
+    }
+  }
+
+  const porFamilia = new Map<string, ComparacionFamiliaCliente[]>();
+  for (const x of gruposFamiliaCliente) {
+    if (!porFamilia.has(x.familia)) porFamilia.set(x.familia, []);
+    porFamilia.get(x.familia)!.push(x);
+  }
+  for (const [, rows] of porFamilia) {
+    rows.sort((a, b) => b.importePromedio - a.importePromedio);
+    rows.forEach((x, i) => { x.posicion = i + 1; });
+  }
+  gruposFamiliaCliente.sort((a, b) => a.familia.localeCompare(b.familia) || b.importePromedio - a.importePromedio);
+
   const oportunidades: ResultadoComercial["oportunidades"] = [];
   for (const grupo of gruposMaterial) {
+    // Sin al menos dos clientes no existe comparación real.
     if (grupo.clientes.length < 2) continue;
     for (const c of grupo.clientes) {
-      const otros = grupo.clientes.filter((x) => x.cliente !== c.cliente);
-      const ref = promedio(otros.map((x) => x.importePromedio));
+      const ref = c.referenciaOtros;
       if (!ref) continue;
       const diff = c.importePromedio - ref;
-      const pct = (diff / ref) * 100;
+      const pct = porcentajeVs(c.importePromedio, ref);
       const veces = c.importePromedio / ref;
+
       if (pct >= UMBRAL_OPORTUNIDAD) {
         oportunidades.push({
           tipo: "PRECIO_ALTO",
@@ -302,7 +360,7 @@ export function realizarAnalisis(resultados: ResultadoValidacion[]): ResultadoCo
           diferencia: diff,
           porcentaje: pct,
           veces,
-          texto: `${c.razonSocial} presenta un importe ${pct.toFixed(1)}% por encima del promedio de los otros clientes para el material ${grupo.material}.`,
+          texto: `${c.razonSocial} tiene un importe ${pct.toFixed(1)}% superior a la referencia de los otros clientes para el mismo material.`,
         });
       } else if (pct <= -UMBRAL_OPORTUNIDAD) {
         oportunidades.push({
@@ -316,7 +374,7 @@ export function realizarAnalisis(resultados: ResultadoValidacion[]): ResultadoCo
           diferencia: diff,
           porcentaje: pct,
           veces,
-          texto: `${c.razonSocial} presenta un importe ${Math.abs(pct).toFixed(1)}% por debajo del promedio de los otros clientes para el material ${grupo.material}.`,
+          texto: `${c.razonSocial} tiene un importe ${Math.abs(pct).toFixed(1)}% inferior a la referencia de los otros clientes para el mismo material.`,
         });
       }
     }
