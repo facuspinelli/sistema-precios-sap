@@ -123,7 +123,7 @@ export async function generarInformeWord(analisis: ResultadoComercial, seleccion
 
   children.push(new Paragraph({ text: "4. Distribución económica por familia", heading: HeadingLevel.HEADING_1 }));
   children.push(new Paragraph({ text: "La siguiente visualización muestra cómo se distribuye el importe válido dentro del universo seleccionado.", spacing: { after: 120 } }));
-  children.push(new Paragraph({ children: [new ImageRun({ data: svgData(graficoFamiliasSvg(analisis)), type: "svg", fallback: "chart.svg", transformation: { width: 620, height: Math.min(430, Math.max(150, analisis.gruposFamilia.slice(0, 10).length * 29 + 50)) } })], alignment: AlignmentType.CENTER }));
+  children.push(new Paragraph({ children: [new ImageRun({ data: svgData(graficoFamiliasSvg(analisis)), type: "svg", fallback: { type: "png", data: new Uint8Array([137,80,78,71,13,10,26,10,0,0,0,13,73,72,68,82,0,0,0,1,0,0,0,1,8,6,0,0,0,31,21,196,137,0,0,0,13,73,68,65,84,120,156,99,248,207,192,240,31,0,5,0,1,255,137,153,61,0,0,0,0,73,69,78,68,174,66,96,130]) }, transformation: { width: 620, height: Math.min(430, Math.max(150, analisis.gruposFamilia.slice(0, 10).length * 29 + 50)) } })], alignment: AlignmentType.CENTER }));
 
   children.push(new Paragraph({ text: "5. Detalle por familia", heading: HeadingLevel.HEADING_1 }));
   children.push(new Table({
