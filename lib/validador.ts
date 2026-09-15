@@ -1,566 +1,166 @@
-import baseProductos from "../data/base_productos.json";
-import baseReglas from "../data/base_reglas.json";
+import { enriquecerMaterial, normalizar, numero, reglasCliente, texto, valorCampo } from "./maestros";
+
+export type Estado = "OK" | "ALERTA" | "ERROR";
 
 export type ResultadoValidacion = {
   fila: number;
   datos: Record<string, unknown>;
-
-  // Cliente
   cliente: string;
   razonSocial: string;
   clienteEncontrado: boolean;
-
-  // Condición
   condicionExcel: string;
   condicionEsperada: string;
   condicionCorrecta: boolean;
   condicionesEncontradas: string[];
+  condicionesExcelCliente: string[];
   multiplesCondiciones: boolean;
-
-  // Material
+  condicionAnalisis: string;
+  incluidoEnAnalisis: boolean;
   material: string;
   descripcionMaterial: string;
   materialEncontrado: boolean;
-
-  // Datos económicos
+  textoLargoMaterial: string;
+  familia: string;
+  clasificacionMaterial: string;
   importe: number;
   moneda: string;
   cantidad: number;
   por: number;
   unidadMedida: string;
-
-  // PB00
   tienePB00: boolean;
   importePB00: number;
   importeFinal: number;
-
-  // Resultado
   observaciones: string[];
-  estado: "OK" | "ALERTA" | "ERROR";
+  estado: Estado;
 };
 
-function normalizar(valor: unknown): string {
-  if (valor === null || valor === undefined) {
-    return "";
-  }
-
-  return String(valor)
-    .trim()
-    .toUpperCase();
+function esPB00(datos: Record<string, unknown>): boolean {
+  return Object.values(datos).some((v) => normalizar(v).includes("PB00"));
 }
 
-function numero(valor: unknown): number {
-  if (
-    valor === null ||
-    valor === undefined ||
-    valor === ""
-  ) {
-    return 0;
-  }
-
-  let texto = String(valor)
-    .trim()
-    .replace(/\s/g, "");
-
-  /*
-   * SAP puede mostrar:
-   *
-   * 966,23
-   * 25.037,09
-   * 100
-   *
-   * Convertimos todo a número.
-   */
-
-  if (
-    texto.includes(".") &&
-    texto.includes(",")
-  ) {
-    texto = texto
-      .replace(/\./g, "")
-      .replace(",", ".");
-  } else if (texto.includes(",")) {
-    texto = texto.replace(",", ".");
-  }
-
-  const resultado =
-    Number(texto);
-
-  return isNaN(resultado)
-    ? 0
-    : resultado;
-}
-
-function buscarValor(
-  datos: Record<string, unknown>,
-  posiblesNombres: string[]
-): string {
-  const entradas =
-    Object.entries(datos);
-
-  for (
-    const nombre of posiblesNombres
-  ) {
-    const buscado =
-      normalizar(nombre);
-
-    const encontrada =
-      entradas.find(
-        ([clave]) =>
-          normalizar(clave) === buscado
-      );
-
-    if (encontrada) {
-      return normalizar(
-        encontrada[1]
-      );
-    }
-  }
-
-  return "";
-}
-
-function buscarProducto(
-  material: string
-) {
-  const productos =
-    Array.isArray(
-      baseProductos.productos
-    )
-      ? baseProductos.productos
-      : [];
-
-  return productos.find(
-    (producto: any) =>
-      normalizar(
-        producto.material
-      ) === material
-  );
-}
-
-function buscarReglasCliente(
-  cliente: string
-) {
-  const reglas =
-    Array.isArray(
-      baseReglas.reglas
-    )
-      ? baseReglas.reglas
-      : [];
-
-  return reglas.filter(
-    (regla: any) =>
-      normalizar(
-        regla.cod_sap
-      ) === cliente
-  );
-}
-
-function esPB00(
-  datos: Record<string, unknown>
-): boolean {
-  const valores =
-    Object.values(datos)
-      .map(normalizar);
-
-  return valores.some(
-    (valor) =>
-      valor === "PB00" ||
-      valor.includes("-> PB00") ||
-      valor.includes("PB00")
-  );
-}
-
-function esFilaPB00(
-  datos: Record<string, unknown>
-): boolean {
-  return esPB00(datos);
-}
-
-export function validarFila(
-  datos: Record<string, unknown>,
-  numeroFila: number
-): ResultadoValidacion {
-
+function filaBase(datos: Record<string, unknown>, numeroFila: number): ResultadoValidacion {
   const observaciones: string[] = [];
+  const cliente = valorCampo(datos, ["Cliente", "Cl.sap", "Cod SAP", "COD SAP", "Código SAP", "Codigo SAP"]);
+  const reglas = reglasCliente(cliente);
+  const clienteEncontrado = reglas.length > 0;
+  const razonSocial = clienteEncontrado ? texto(reglas[0].razon_social) : "";
 
-  /*
-   * ==============================
-   * CLIENTE
-   * ==============================
-   */
+  if (!clienteEncontrado) observaciones.push(`Cliente ${cliente || "(vacío)"} no existe en la base de referencia ZPR.`);
 
-  const cliente =
-    buscarValor(datos, [
-      "Cliente",
-      "Cl.sap",
-      "Cod SAP",
-      "COD SAP",
-      "Código SAP",
-      "Codigo SAP"
-    ]);
+  const condicionExcel = valorCampo(datos, ["Cl.cond.", "Cl. cond.", "Condición", "Condicion", "Condición impositiva", "Condicion impositiva"]);
+  const condicionesEncontradas = Array.from(new Set(reglas.map((r: any) => normalizar(r.condicion_impositiva)).filter(Boolean)));
+  const condicionEsperada = condicionesEncontradas.length === 1 ? condicionesEncontradas[0] : "";
+  const multiplesCondiciones = condicionesEncontradas.length > 1;
+  if (multiplesCondiciones) observaciones.push(`El cliente ${cliente} tiene múltiples condiciones en la base: ${condicionesEncontradas.join(", ")}.`);
 
-  const reglasCliente =
-    buscarReglasCliente(cliente);
+  const material = valorCampo(datos, ["Material", "Material PROD", "Material producto", "Código material", "Codigo material"]);
+  const mat = enriquecerMaterial(material);
+  if (!mat.encontrado && material) observaciones.push(`El material ${material} no existe en el Nomenclador SAP.`);
 
-  const clienteEncontrado =
-    reglasCliente.length > 0;
+  const importe = numero(valorCampo(datos, ["Importe"]));
+  const moneda = valorCampo(datos, ["Un."]);
+  const cantidad = numero(valorCampo(datos, ["Ctd.escala", "Ctd. escala", "Cantidad"]));
+  const por = numero(valorCampo(datos, ["por"]));
+  const unidadMedida = valorCampo(datos, ["UM_2", "UM"]);
 
-  const razonSocial =
-    clienteEncontrado
-      ? normalizar(
-          reglasCliente[0]
-            .razon_social
-        )
-      : "";
-
-  if (!clienteEncontrado) {
-    observaciones.push(
-      `Cliente ${
-        cliente || "(vacío)"
-      } no existe en la base de Condición Impositiva.`
-    );
+  const condicionCorrecta = Boolean(clienteEncontrado && condicionEsperada && condicionExcel && condicionExcel === condicionEsperada);
+  if (clienteEncontrado && condicionEsperada && condicionExcel && !condicionCorrecta) {
+    observaciones.push(`Condición incorrecta: Excel = ${condicionExcel}; según la base corresponde ${condicionEsperada}.`);
   }
 
-  /*
-   * ==============================
-   * CONDICIÓN
-   * ==============================
-   */
+  let incluidoEnAnalisis = condicionCorrecta && mat.encontrado;
+  let condicionAnalisis = condicionCorrecta ? condicionEsperada : "";
 
-  const condicionExcel =
-    buscarValor(datos, [
-      "Cl.cond.",
-      "Cl. cond.",
-      "Condición",
-      "Condicion",
-      "Condición impositiva",
-      "Condicion impositiva"
-    ]);
+  if (!mat.encontrado) incluidoEnAnalisis = false;
+  if (!clienteEncontrado || !condicionCorrecta) incluidoEnAnalisis = false;
+  if (incluidoEnAnalisis) condicionAnalisis = condicionExcel;
 
-  const condicionesEncontradas: string[] =
-    [];
-
-  for (
-    const regla of reglasCliente
-  ) {
-    const condicion =
-      normalizar(
-        (regla as any)
-          .condicion_impositiva
-      );
-
-    if (
-      condicion &&
-      condicionesEncontradas.indexOf(
-        condicion
-      ) === -1
-    ) {
-      condicionesEncontradas.push(
-        condicion
-      );
-    }
-  }
-
-  const condicionEsperada =
-    condicionesEncontradas.length === 1
-      ? condicionesEncontradas[0]
-      : "";
-
-  const multiplesCondiciones =
-    condicionesEncontradas.length > 1;
-
-  if (multiplesCondiciones) {
-    observaciones.push(
-      `El cliente ${cliente} tiene múltiples condiciones en la base: ${condicionesEncontradas.join(
-        ", "
-      )}.`
-    );
-  }
-
-  let condicionCorrecta = false;
-
-  if (
-    clienteEncontrado &&
-    condicionEsperada &&
-    condicionExcel
-  ) {
-    condicionCorrecta =
-      condicionExcel ===
-      condicionEsperada;
-
-    if (!condicionCorrecta) {
-      observaciones.push(
-        `Condición incorrecta: Excel = ${condicionExcel}; según la base corresponde ${condicionEsperada}.`
-      );
-    }
-  }
-
-  /*
-   * ==============================
-   * MATERIAL
-   * ==============================
-   */
-
-  const material =
-    buscarValor(datos, [
-      "Material",
-      "Material PROD",
-      "Material producto",
-      "Código material",
-      "Codigo material"
-    ]);
-
-  const producto =
-    buscarProducto(material);
-
-  const materialEncontrado =
-    Boolean(producto);
-
-  const descripcionMaterial =
-    producto
-      ? normalizar(
-          producto.descripcion
-        )
-      : "";
-
-  if (
-    !materialEncontrado &&
-    material
-  ) {
-    observaciones.push(
-      `El material ${material} no existe en el Nomenclador SAP.`
-    );
-  }
-
-  /*
-   * ==============================
-   * DATOS ECONÓMICOS
-   * ==============================
-   */
-
-  const importeTexto =
-    buscarValor(datos, [
-      "Importe"
-    ]);
-
-  const importe =
-    numero(importeTexto);
-
-  const moneda =
-    buscarValor(datos, [
-      "Un."
-    ]);
-
-  const cantidadTexto =
-    buscarValor(datos, [
-      "Ctd.escala",
-      "Ctd. escala",
-      "Cantidad"
-    ]);
-
-  const cantidad =
-    numero(cantidadTexto);
-
-  const porTexto =
-    buscarValor(datos, [
-      "por"
-    ]);
-
-  const por =
-    numero(porTexto);
-
-  const unidadMedida =
-    buscarValor(datos, [
-      "UM"
-    ]);
-
-  /*
-   * ==============================
-   * PB00
-   * ==============================
-   */
-
-  const tienePB00 =
-    esPB00(datos);
-
-  /*
-   * Una fila PB00 contiene solamente
-   * el importe del ajuste.
-   */
-
-  const importePB00 =
-    tienePB00
-      ? importe
-      : 0;
-
-  /*
-   * En una fila normal el importe
-   * todavía no tiene PB00 asociado.
-   *
-   * validarExcel() se encarga de
-   * asociarlo a la fila anterior.
-   */
-
-  const importeFinal =
-    importe + importePB00;
-
-  if (tienePB00) {
-    observaciones.push(
-      "Línea PB00 detectada."
-    );
-  }
-
-  /*
-   * ==============================
-   * ESTADO
-   * ==============================
-   */
-
-  let estado:
-    | "OK"
-    | "ALERTA"
-    | "ERROR" = "OK";
-
-  if (
-    observaciones.some(
-      (observacion) =>
-        observacion.includes(
-          "no existe"
-        )
-    )
-  ) {
-    estado = "ERROR";
-  } else if (
-    observaciones.length > 0
-  ) {
-    estado = "ALERTA";
-  }
+  let estado: Estado = "OK";
+  if (!clienteEncontrado || !mat.encontrado) estado = "ERROR";
+  else if (!condicionCorrecta || observaciones.length) estado = "ALERTA";
 
   return {
     fila: numeroFila,
     datos,
-
     cliente,
     razonSocial,
     clienteEncontrado,
-
     condicionExcel,
     condicionEsperada,
     condicionCorrecta,
     condicionesEncontradas,
+    condicionesExcelCliente: condicionExcel ? [condicionExcel] : [],
     multiplesCondiciones,
-
+    condicionAnalisis,
+    incluidoEnAnalisis,
     material,
-    descripcionMaterial,
-    materialEncontrado,
-
+    descripcionMaterial: mat.descripcion,
+    materialEncontrado: mat.encontrado,
+    textoLargoMaterial: mat.textoLargo,
+    familia: mat.familia,
+    clasificacionMaterial: mat.clasificacion,
     importe,
     moneda,
     cantidad,
     por,
     unidadMedida,
-
-    tienePB00,
-    importePB00,
-    importeFinal,
-
+    tienePB00: false,
+    importePB00: 0,
+    importeFinal: importe,
     observaciones,
-    estado
+    estado,
   };
 }
 
-export function validarExcel(
-  filas: Record<string, unknown>[]
-): ResultadoValidacion[] {
+export function validarExcel(filas: Record<string, unknown>[]): ResultadoValidacion[] {
+  const resultados: ResultadoValidacion[] = [];
 
-  const resultados: ResultadoValidacion[] =
-    [];
+  for (let i = 0; i < filas.length; i++) {
+    const fila = filas[i];
+    const numeroFila = i + 2;
 
-  for (
-    let i = 0;
-    i < filas.length;
-    i++
-  ) {
-    const fila =
-      filas[i];
-
-    const numeroFila =
-      i + 2;
-
-    /*
-     * Detectamos PB00 antes de crear
-     * un resultado independiente.
-     */
-
-    if (esFilaPB00(fila)) {
-
-      const importePB00 =
-        numero(
-          buscarValor(fila, [
-            "Importe"
-          ])
-        );
-
-      /*
-       * PB00 se aplica a la fila
-       * inmediatamente anterior.
-       */
-
-      const anterior =
-        resultados[
-          resultados.length - 1
-        ];
-
+    if (esPB00(fila)) {
+      const importePB00 = numero(valorCampo(fila, ["Importe"]));
+      const anterior = resultados[resultados.length - 1];
       if (anterior) {
-
-        anterior.tienePB00 =
-          true;
-
-        anterior.importePB00 =
-          importePB00;
-
-        anterior.importeFinal =
-          anterior.importe +
-          importePB00;
-
-        anterior.observaciones.push(
-          `PB00 aplicado: +${importePB00} ${anterior.moneda}. Importe final: ${anterior.importeFinal.toFixed(
-            2
-          )}.`
-        );
-
-        if (
-          anterior.estado === "OK"
-        ) {
-          anterior.estado =
-            "ALERTA";
-        }
-
-      } else {
-
-        /*
-         * Caso extraño:
-         * PB00 sin una línea anterior.
-         */
-
-        resultados.push(
-          validarFila(
-            fila,
-            numeroFila
-          )
-        );
+        anterior.tienePB00 = true;
+        anterior.importePB00 = importePB00;
+        anterior.importeFinal = anterior.importe + importePB00;
+        anterior.observaciones.push(`PB00 aplicado: +${importePB00} ${anterior.moneda}.`);
+        if (anterior.estado === "OK") anterior.estado = "ALERTA";
       }
-
       continue;
     }
 
-    resultados.push(
-      validarFila(
-        fila,
-        numeroFila
-      )
-    );
+    resultados.push(filaBase(fila, numeroFila));
+  }
+
+  // La condición del maestro manda a nivel cliente. Si el Excel trae ZPR0 y ZPR2,
+  // solo la fila que coincide con la base queda habilitada para el análisis comercial.
+  const porCliente = new Map<string, ResultadoValidacion[]>();
+  for (const r of resultados) {
+    if (!porCliente.has(r.cliente)) porCliente.set(r.cliente, []);
+    porCliente.get(r.cliente)!.push(r);
+  }
+
+  for (const [cliente, filasCliente] of porCliente) {
+    const condicionesExcel = Array.from(new Set(filasCliente.map((r) => r.condicionExcel).filter(Boolean)));
+    const reglas = reglasCliente(cliente);
+    const esperadas = Array.from(new Set(reglas.map((r: any) => normalizar(r.condicion_impositiva)).filter(Boolean)));
+    const esperada = esperadas.length === 1 ? esperadas[0] : "";
+    const multiples = condicionesExcel.length > 1;
+
+    for (const r of filasCliente) {
+      r.condicionesExcelCliente = condicionesExcel;
+      r.multiplesCondiciones = multiples;
+      if (multiples) {
+        const mensaje = `El cliente ${r.razonSocial || cliente} presenta en el Excel las condiciones ${condicionesExcel.join(" y ")}. Según la base corresponde ${esperada || "revisar"}.`;
+        if (!r.observaciones.some((o) => o === mensaje)) r.observaciones.push(mensaje);
+        if (r.estado === "OK") r.estado = "ALERTA";
+      }
+      r.incluidoEnAnalisis = Boolean(r.clienteEncontrado && r.materialEncontrado && esperada && r.condicionExcel === esperada);
+      r.condicionAnalisis = r.incluidoEnAnalisis ? r.condicionExcel : "";
+    }
   }
 
   return resultados;
