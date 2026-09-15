@@ -35,7 +35,7 @@ export type ResultadoValidacion = {
 };
 
 function esPB00(datos: Record<string, unknown>): boolean {
-  return Object.values(datos).some((v) => normalizar(v).includes("PB00"));
+  return Object.values(datos).some((v) => normalizar(v) === "PB00");
 }
 
 function filaBase(datos: Record<string, unknown>, numeroFila: number): ResultadoValidacion {
@@ -63,17 +63,18 @@ function filaBase(datos: Record<string, unknown>, numeroFila: number): Resultado
   const por = numero(valorCampo(datos, ["por"]));
   const unidadMedida = valorCampo(datos, ["UM_2", "UM"]);
 
-  const condicionCorrecta = Boolean(clienteEncontrado && condicionEsperada && condicionExcel && condicionExcel === condicionEsperada);
+  const condicionCorrecta = Boolean(
+    clienteEncontrado &&
+    condicionEsperada &&
+    condicionExcel &&
+    normalizar(condicionExcel) === normalizar(condicionEsperada)
+  );
   if (clienteEncontrado && condicionEsperada && condicionExcel && !condicionCorrecta) {
     observaciones.push(`Condición incorrecta: Excel = ${condicionExcel}; según la base corresponde ${condicionEsperada}.`);
   }
 
-  let incluidoEnAnalisis = condicionCorrecta && mat.encontrado;
-  let condicionAnalisis = condicionCorrecta ? condicionEsperada : "";
-
-  if (!mat.encontrado) incluidoEnAnalisis = false;
-  if (!clienteEncontrado || !condicionCorrecta) incluidoEnAnalisis = false;
-  if (incluidoEnAnalisis) condicionAnalisis = condicionExcel;
+  const incluidoEnAnalisis = Boolean(clienteEncontrado && mat.encontrado && condicionCorrecta);
+  const condicionAnalisis = incluidoEnAnalisis ? condicionEsperada : "";
 
   let estado: Estado = "OK";
   if (!clienteEncontrado || !mat.encontrado) estado = "ERROR";
@@ -89,7 +90,7 @@ function filaBase(datos: Record<string, unknown>, numeroFila: number): Resultado
     condicionEsperada,
     condicionCorrecta,
     condicionesEncontradas,
-    condicionesExcelCliente: condicionExcel ? [condicionExcel] : [],
+    condicionesExcelCliente: condicionExcel ? [normalizar(condicionExcel)] : [],
     multiplesCondiciones,
     condicionAnalisis,
     incluidoEnAnalisis,
@@ -117,7 +118,8 @@ export function validarExcel(filas: Record<string, unknown>[]): ResultadoValidac
 
   for (let i = 0; i < filas.length; i++) {
     const fila = filas[i];
-    const numeroFila = i + 2;
+    const origen = numero(fila.__filaOrigen);
+    const numeroFila = origen || i + 2;
 
     if (esPB00(fila)) {
       const importePB00 = numero(valorCampo(fila, ["Importe"]));
@@ -135,16 +137,14 @@ export function validarExcel(filas: Record<string, unknown>[]): ResultadoValidac
     resultados.push(filaBase(fila, numeroFila));
   }
 
-  // La condición del maestro manda a nivel cliente. Si el Excel trae ZPR0 y ZPR2,
-  // solo la fila que coincide con la base queda habilitada para el análisis comercial.
   const porCliente = new Map<string, ResultadoValidacion[]>();
   for (const r of resultados) {
     if (!porCliente.has(r.cliente)) porCliente.set(r.cliente, []);
     porCliente.get(r.cliente)!.push(r);
   }
 
-  for (const [cliente, filasCliente] of porCliente) {
-    const condicionesExcel = Array.from(new Set(filasCliente.map((r) => r.condicionExcel).filter(Boolean)));
+  for (const [cliente, filasCliente] of Array.from(porCliente.entries())) {
+    const condicionesExcel = Array.from(new Set(filasCliente.map((r) => normalizar(r.condicionExcel)).filter(Boolean)));
     const reglas = reglasCliente(cliente);
     const esperadas = Array.from(new Set(reglas.map((r: any) => normalizar(r.condicion_impositiva)).filter(Boolean)));
     const esperada = esperadas.length === 1 ? esperadas[0] : "";
@@ -155,11 +155,12 @@ export function validarExcel(filas: Record<string, unknown>[]): ResultadoValidac
       r.multiplesCondiciones = multiples;
       if (multiples) {
         const mensaje = `El cliente ${r.razonSocial || cliente} presenta en el Excel las condiciones ${condicionesExcel.join(" y ")}. Según la base corresponde ${esperada || "revisar"}.`;
-        if (!r.observaciones.some((o) => o === mensaje)) r.observaciones.push(mensaje);
+        if (!r.observaciones.includes(mensaje)) r.observaciones.push(mensaje);
         if (r.estado === "OK") r.estado = "ALERTA";
       }
-      r.incluidoEnAnalisis = Boolean(r.clienteEncontrado && r.materialEncontrado && esperada && r.condicionExcel === esperada);
-      r.condicionAnalisis = r.incluidoEnAnalisis ? r.condicionExcel : "";
+      r.condicionEsperada = esperada || r.condicionEsperada;
+      r.incluidoEnAnalisis = Boolean(r.clienteEncontrado && r.materialEncontrado && esperada && normalizar(r.condicionExcel) === esperada);
+      r.condicionAnalisis = r.incluidoEnAnalisis ? esperada : "";
     }
   }
 
