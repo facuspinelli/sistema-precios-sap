@@ -22,25 +22,51 @@ export function numero(valor: unknown): number {
   if (valor === null || valor === undefined || valor === "") return 0;
   if (typeof valor === "number") return Number.isFinite(valor) ? valor : 0;
 
-  let t = texto(valor).replace(/\s/g, "").replace(/\$/g, "");
+  let t = texto(valor)
+    .replace(/\s/g, "")
+    .replace(/[$€£]/g, "")
+    .replace(/\u00A0/g, "");
   if (!t) return 0;
 
-  const negativo = t.startsWith("-");
-  t = t.replace(/^-/, "");
+  const negativo = /^-/.test(t);
+  t = t.replace(/^-/, "").replace(/[^0-9.,]/g, "");
+  if (!t) return 0;
 
-  // Formato SAP/Argentina: 1.234.567,89
-  if (t.includes(",")) {
-    t = t.replace(/\./g, "").replace(/,/g, ".");
-  } else {
-    // Si solo hay puntos, se interpreta como decimal estándar.
-    t = t.replace(/[^0-9.]/g, "");
+  const tieneComa = t.includes(",");
+  const tienePunto = t.includes(".");
+
+  if (tieneComa && tienePunto) {
+    // Detecta el separador decimal por su última aparición.
+    // SAP/Argentina: 25.000,32 -> 25000.32
+    // Excel/US:       25,000.32 -> 25000.32
+    if (t.lastIndexOf(",") > t.lastIndexOf(".")) {
+      t = t.replace(/\./g, "").replace(/,/g, ".");
+    } else {
+      t = t.replace(/,/g, "");
+    }
+  } else if (tieneComa) {
+    // En SAP la coma es el separador decimal.
+    t = t.replace(/,/g, ".");
+  } else if (tienePunto) {
+    const partes = t.split(".");
+    if (partes.length > 2) {
+      // 1.250.000 -> 1250000
+      t = partes.join("");
+    } else {
+      const decimales = partes[1] || "";
+      // En una exportación SAP, un único punto con 3 dígitos
+      // normalmente representa miles: 25.000 -> 25000.
+      // Con 1-2 dígitos lo tratamos como decimal para tolerar
+      // archivos Excel que ya vengan con formato numérico textual.
+      if (decimales.length === 3 && partes[0].length <= 3) t = partes.join("");
+      else t = partes.join(".");
+    }
   }
 
   const n = Number(t);
   if (!Number.isFinite(n)) return 0;
   return negativo ? -n : n;
 }
-
 export function valorCampo(datos: Record<string, unknown>, nombres: string[], preferirNoVacio = true): string {
   const entries = Object.entries(datos);
   for (const nombre of nombres) {
