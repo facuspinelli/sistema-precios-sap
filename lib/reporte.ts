@@ -123,7 +123,7 @@ export async function generarInformeWord(analisis: ResultadoComercial, seleccion
 
   children.push(new Paragraph({ text: "4. Distribución económica por familia", heading: HeadingLevel.HEADING_1 }));
   children.push(new Paragraph({ text: "La siguiente visualización muestra cómo se distribuye el importe válido dentro del universo seleccionado.", spacing: { after: 120 } }));
-  children.push(new Paragraph({ children: [new ImageRun({ data: svgData(graficoFamiliasSvg(analisis)), type: "svg", transformation: { width: 620, height: Math.min(430, Math.max(150, analisis.gruposFamilia.slice(0, 10).length * 29 + 50)) } })], alignment: AlignmentType.CENTER }));
+  children.push(new Paragraph({ children: [new ImageRun({ data: svgData(graficoFamiliasSvg(analisis)), type: "svg", fallback: "chart.svg", transformation: { width: 620, height: Math.min(430, Math.max(150, analisis.gruposFamilia.slice(0, 10).length * 29 + 50)) } })], alignment: AlignmentType.CENTER }));
 
   children.push(new Paragraph({ text: "5. Detalle por familia", heading: HeadingLevel.HEADING_1 }));
   children.push(new Table({
