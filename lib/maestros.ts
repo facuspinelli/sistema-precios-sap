@@ -3,21 +3,42 @@ import baseReglas from "../data/base_reglas.json";
 
 export function normalizar(valor: unknown): string {
   if (valor === null || valor === undefined) return "";
-  return String(valor).replace(/\u0000/g, "").trim().toUpperCase();
+  return String(valor).replace(/\u0000/g, "").replace(/^\uFEFF/, "").trim().toUpperCase();
 }
 
 export function texto(valor: unknown): string {
   if (valor === null || valor === undefined) return "";
-  return String(valor).replace(/\u0000/g, "").trim();
+  return String(valor).replace(/\u0000/g, "").replace(/^\uFEFF/, "").trim();
 }
 
+/**
+ * Convierte importes SAP/Argentina sin perder miles:
+ * 2.383,37 -> 2383.37
+ * 819,03   -> 819.03
+ * 2383.37  -> 2383.37
+ * También admite números nativos que ya vengan correctamente parseados.
+ */
 export function numero(valor: unknown): number {
   if (valor === null || valor === undefined || valor === "") return 0;
-  let t = String(valor).trim().replace(/\s/g, "");
-  if (t.includes(".") && t.includes(",")) t = t.replace(/\./g, "").replace(",", ".");
-  else if (t.includes(",")) t = t.replace(",", ".");
+  if (typeof valor === "number") return Number.isFinite(valor) ? valor : 0;
+
+  let t = texto(valor).replace(/\s/g, "").replace(/\$/g, "");
+  if (!t) return 0;
+
+  const negativo = t.startsWith("-");
+  t = t.replace(/^-/, "");
+
+  // Formato SAP/Argentina: 1.234.567,89
+  if (t.includes(",")) {
+    t = t.replace(/\./g, "").replace(/,/g, ".");
+  } else {
+    // Si solo hay puntos, se interpreta como decimal estándar.
+    t = t.replace(/[^0-9.]/g, "");
+  }
+
   const n = Number(t);
-  return Number.isFinite(n) ? n : 0;
+  if (!Number.isFinite(n)) return 0;
+  return negativo ? -n : n;
 }
 
 export function valorCampo(datos: Record<string, unknown>, nombres: string[], preferirNoVacio = true): string {
@@ -35,19 +56,22 @@ export function valorCampo(datos: Record<string, unknown>, nombres: string[], pr
   return "";
 }
 
+const productos = Array.isArray((baseProductos as any).productos) ? (baseProductos as any).productos : [];
+const reglas = Array.isArray((baseReglas as any).reglas) ? (baseReglas as any).reglas : [];
+
 export function productoPorMaterial(material: string): any | null {
-  const productos = Array.isArray((baseProductos as any).productos) ? (baseProductos as any).productos : [];
-  return productos.find((p: any) => normalizar(p.material) === normalizar(material)) || null;
+  const buscado = normalizar(material);
+  return productos.find((p: any) => normalizar(p.material) === buscado) || null;
 }
 
 export function reglaCliente(cliente: string): any | null {
-  const reglas = Array.isArray((baseReglas as any).reglas) ? (baseReglas as any).reglas : [];
-  return reglas.find((r: any) => normalizar(r.cod_sap) === normalizar(cliente)) || null;
+  const buscado = normalizar(cliente);
+  return reglas.find((r: any) => normalizar(r.cod_sap) === buscado) || null;
 }
 
 export function reglasCliente(cliente: string): any[] {
-  const reglas = Array.isArray((baseReglas as any).reglas) ? (baseReglas as any).reglas : [];
-  return reglas.filter((r: any) => normalizar(r.cod_sap) === normalizar(cliente));
+  const buscado = normalizar(cliente);
+  return reglas.filter((r: any) => normalizar(r.cod_sap) === buscado);
 }
 
 export function extraerFamilia(textoLargo: string): string {
@@ -65,14 +89,7 @@ export function extraerClasificacion(textoLargo: string): string {
 export function enriquecerMaterial(material: string) {
   const p = productoPorMaterial(material);
   if (!p) {
-    return {
-      encontrado: false,
-      descripcion: "",
-      unidad: "",
-      textoLargo: "",
-      familia: "",
-      clasificacion: "",
-    };
+    return { encontrado: false, descripcion: "", unidad: "", textoLargo: "", familia: "", clasificacion: "" };
   }
   const textoLargo = texto(p.texto_largo);
   return {
