@@ -117,13 +117,13 @@ export async function generarInformeWord(analisis: ResultadoComercial, seleccion
       new TableRow({ children: [cell("Materiales", true), cell(String(analisis.materiales))] }),
       new TableRow({ children: [cell("Importe válido analizado", true), cell(ARS(analisis.importeTotal), true)] }),
       new TableRow({ children: [cell("Importe promedio", true), cell(ARS(analisis.importePromedio))] }),
-      new TableRow({ children: [cell("Umbral de oportunidad", true), cell(`±${UMBRAL_OPORTUNIDAD}% vs. otros clientes del mismo material`)] }),
+      new TableRow({ children: [cell("Umbral de señal comercial", true), cell(`±${UMBRAL_OPORTUNIDAD}% (solo marca diferencias; no reemplaza el % real)`)] }),
     ],
   }));
 
   children.push(new Paragraph({ text: "4. Distribución económica por familia", heading: HeadingLevel.HEADING_1 }));
   children.push(new Paragraph({ text: "La siguiente visualización muestra cómo se distribuye el importe válido dentro del universo seleccionado.", spacing: { after: 120 } }));
-  children.push(new Paragraph({ children: [new ImageRun({ data: svgData(graficoFamiliasSvg(analisis)), type: "svg", fallback: { type: "png", data: new Uint8Array([137,80,78,71,13,10,26,10,0,0,0,13,73,72,68,82,0,0,0,1,0,0,0,1,8,6,0,0,0,31,21,196,137,0,0,0,13,73,68,65,84,120,156,99,248,207,192,240,31,0,5,0,1,255,137,153,61,0,0,0,0,73,69,78,68,174,66,96,130]) }, transformation: { width: 620, height: Math.min(430, Math.max(150, analisis.gruposFamilia.slice(0, 10).length * 29 + 50)) } })], alignment: AlignmentType.CENTER }));
+  children.push(new Paragraph({ children: [new ImageRun({ data: svgData(graficoFamiliasSvg(analisis)), type: "svg", fallback: { type: "png", data: new Uint8Array([137,80,78,71,13,10,26,10,0,0,0,13,73,72,82,0,0,0,1,0,0,0,1,8,6,0,0,0,31,21,196,137,0,0,0,13,73,68,65,84,120,156,99,248,207,192,240,31,0,5,0,1,255,137,153,61,0,0,0,0,73,69,78,68,174,66,96,130]) }, transformation: { width: 620, height: Math.min(430, Math.max(150, analisis.gruposFamilia.slice(0, 10).length * 29 + 50)) } })], alignment: AlignmentType.CENTER }));
 
   children.push(new Paragraph({ text: "5. Detalle por familia", heading: HeadingLevel.HEADING_1 }));
   children.push(new Table({
@@ -134,7 +134,21 @@ export async function generarInformeWord(analisis: ResultadoComercial, seleccion
     ],
   }));
 
-  children.push(new Paragraph({ text: "6. Oportunidades comerciales", heading: HeadingLevel.HEADING_1 }));
+  children.push(new Paragraph({ text: "6. Comparación por familia y cliente", heading: HeadingLevel.HEADING_1 }));
+  children.push(new Paragraph({ text: "El porcentaje de familia se calcula solo sobre materiales compartidos dentro de la familia y del universo seleccionado. Es una comparación real contra la referencia de los otros clientes; si no hay materiales comparables, se informa sin porcentaje.", spacing: { after: 120 } }));
+  if (!analisis.gruposFamiliaCliente.length) {
+    children.push(new Paragraph({ text: "No hay comparaciones de familia por cliente disponibles." }));
+  } else {
+    children.push(new Table({
+      width: { size: 100, type: WidthType.PERCENTAGE },
+      rows: [
+        new TableRow({ children: [headerCell("Familia", 2500), headerCell("Cliente", 1900), headerCell("Promedio", 1400), headerCell("Referencia", 1400), headerCell("Diferencia", 1400), headerCell("Vs. otros", 1300), headerCell("Comparables", 1000)] }),
+        ...analisis.gruposFamiliaCliente.slice(0, 80).map((x) => new TableRow({ children: [cell(x.familia), cell(x.cliente), cell(ARS(x.importePromedio)), cell(x.materialesComparables ? ARS(x.referenciaOtros) : "-"), cell(x.materialesComparables ? ARS(x.diferenciaVsOtros) : "-"), cell(x.materialesComparables ? `${PCT(x.porcentajeVsOtros)} · ${x.vecesVsOtros.toFixed(1)}x` : "Sin comparación"), cell(String(x.materialesComparables))] })),
+      ],
+    }));
+  }
+
+  children.push(new Paragraph({ text: "7. Oportunidades comerciales", heading: HeadingLevel.HEADING_1 }));
   if (!analisis.oportunidades.length) {
     children.push(new Paragraph({ text: `No se detectaron diferencias superiores al ±${UMBRAL_OPORTUNIDAD}% entre clientes para materiales compartidos.` }));
   } else {
@@ -148,8 +162,8 @@ export async function generarInformeWord(analisis: ResultadoComercial, seleccion
     children.push(new Paragraph({ text: "Interpretación: las señales de PRECIO ALTO identifican clientes cuyo importe se encuentra por encima de la referencia de los otros clientes para el mismo material. Las señales de PRECIO BAJO pueden justificar una revisión comercial del posicionamiento del precio.", spacing: { before: 120 } }));
   }
 
-  children.push(new Paragraph({ text: "7. Comparación por material y cliente", heading: HeadingLevel.HEADING_1 }));
-  children.push(new Paragraph({ text: "Esta comparación es la base principal para detectar diferencias entre clientes. El porcentaje se calcula contra el promedio de los otros clientes que tienen ese mismo material dentro del universo seleccionado.", spacing: { after: 120 } }));
+  children.push(new Paragraph({ text: "8. Comparación por material y cliente", heading: HeadingLevel.HEADING_1 }));
+  children.push(new Paragraph({ text: "Esta comparación es la base principal para detectar diferencias entre clientes. El porcentaje mostrado es la diferencia real entre el importe del cliente y la referencia de los otros clientes del mismo material, usando únicamente el universo seleccionado. Ejemplo: $10 frente a $5 = +100%; $5 frente a $10 = -50%.", spacing: { after: 120 } }));
   children.push(new Table({
     width: { size: 100, type: WidthType.PERCENTAGE },
     rows: [
@@ -158,7 +172,7 @@ export async function generarInformeWord(analisis: ResultadoComercial, seleccion
     ],
   }));
 
-  children.push(new Paragraph({ text: "8. Calidad de datos y validaciones", heading: HeadingLevel.HEADING_1 }));
+  children.push(new Paragraph({ text: "9. Calidad de datos y validaciones", heading: HeadingLevel.HEADING_1 }));
   const validos = analisis.universo.length;
   children.push(new Paragraph({ text: `El análisis comercial utiliza ${validos.toLocaleString("es-AR")} registro(s) habilitados por las reglas maestras. Los registros con ZPR incorrecta, cliente sin referencia o material sin nomenclador quedan fuera del cálculo comercial.` }));
   children.push(new Paragraph({ text: "Regla ZPR aplicada: la condición definida en la base de Condición Impositiva es la fuente de verdad. Si el Excel presenta más de una ZPR para un cliente, se conserva para el análisis únicamente la condición que coincide con la base." }));
