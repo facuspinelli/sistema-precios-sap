@@ -3,7 +3,7 @@ import { ResultadoValidacion } from "./validador";
 // Umbral para destacar una diferencia como señal comercial.
 // El análisis siempre calcula la diferencia real contra el promedio,
 // aunque sea menor al umbral.
-export const UMBRAL_OPORTUNIDAD = 15;
+export const UMBRAL_OPORTUNIDAD = 0;
 
 export type SeleccionAnalisis = {
   clientes: string[];
@@ -49,10 +49,10 @@ export type ComparacionCliente = {
 
   // Se conservan los nombres anteriores para no romper integraciones.
   // Desde esta versión representan el PROMEDIO DEL GRUPO SELECCIONADO.
-  referenciaOtros: number;
-  diferenciaVsPromedioOtros: number;
-  porcentajeVsPromedioOtros: number;
-  vecesVsPromedioOtros: number;
+  promedioUniverso: number;
+  diferenciaVsPromedio: number;
+  porcentajeVsPromedio: number;
+  vecesVsPromedio: number;
 
   // Nuevos nombres explícitos para la lógica por promedio.
   referenciaPromedioSeleccionado: number;
@@ -87,10 +87,10 @@ export type ComparacionFamiliaCliente = {
   importePromedio: number;
 
   // Se conservan para compatibilidad y ahora representan el promedio de la familia.
-  referenciaOtros: number;
-  diferenciaVsOtros: number;
-  porcentajeVsOtros: number;
-  vecesVsOtros: number;
+  promedioFamilia: number;
+  diferenciaVsPromedio: number;
+  porcentajeVsPromedio: number;
+  vecesVsPromedio: number;
 
   referenciaPromedioSeleccionado: number;
   diferenciaVsPromedioSeleccionado: number;
@@ -412,10 +412,10 @@ export function realizarAnalisis(resultados: ResultadoValidacion[]): ResultadoCo
 
         return {
           ...c,
-          referenciaOtros: promedioGrupo,
-          diferenciaVsPromedioOtros: diferencia,
-          porcentajeVsPromedioOtros: porcentaje,
-          vecesVsPromedioOtros: veces,
+          promedioUniverso: promedioGrupo,
+          diferenciaVsPromedio: diferencia,
+          porcentajeVsPromedio: porcentaje,
+          vecesVsPromedio: veces,
           referenciaPromedioSeleccionado: promedioGrupo,
           diferenciaVsPromedioSeleccionado: diferencia,
           porcentajeVsPromedioSeleccionado: porcentaje,
@@ -482,10 +482,10 @@ export function realizarAnalisis(resultados: ResultadoValidacion[]): ResultadoCo
         materiales: c.materiales,
         importeTotal: c.importeTotal,
         importePromedio: c.importePromedio,
-        referenciaOtros: promedioFamilia,
-        diferenciaVsOtros: diferencia,
-        porcentajeVsOtros: porcentaje,
-        vecesVsOtros: promedioFamilia ? c.importePromedio / promedioFamilia : 0,
+        promedioUniverso: promedioFamilia,
+        diferenciaVsPromedio: diferencia,
+        porcentajeVsPromedio: porcentaje,
+        vecesVsPromedio: promedioFamilia ? c.importePromedio / promedioFamilia : 0,
         referenciaPromedioSeleccionado: promedioFamilia,
         diferenciaVsPromedioSeleccionado: diferencia,
         porcentajeVsPromedioSeleccionado: porcentaje,
@@ -522,7 +522,7 @@ export function realizarAnalisis(resultados: ResultadoValidacion[]): ResultadoCo
       const diff = c.diferenciaVsPromedioSeleccionado;
       const veces = c.vecesVsPromedioSeleccionado;
 
-      if (pct >= UMBRAL_OPORTUNIDAD) {
+      if (pct > 0) {
         oportunidades.push({
           tipo: "PRECIO_ALTO",
           cliente: c.cliente,
@@ -536,7 +536,7 @@ export function realizarAnalisis(resultados: ResultadoValidacion[]): ResultadoCo
           veces,
           texto: `${c.razonSocial} presenta un importe ${pct.toFixed(1)}% superior al promedio de los clientes seleccionados para el mismo material.`,
         });
-      } else if (pct <= -UMBRAL_OPORTUNIDAD) {
+      } else if (pct < 0) {
         oportunidades.push({
           tipo: "PRECIO_BAJO",
           cliente: c.cliente,
