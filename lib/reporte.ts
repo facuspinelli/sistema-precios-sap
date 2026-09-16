@@ -295,7 +295,7 @@ export async function generarInformeWord(
   }
 
   children.push(new Paragraph({ text: "Lectura de oportunidad", heading: HeadingLevel.HEADING_2 }));
-  children.push(tarjeta(`Las diferencias positivas indican importes por encima del promedio de su universo de comparación. Las diferencias negativas indican importes por debajo del promedio. Una diferencia igual a 0% está alineada con el promedio. El umbral de ±${UMBRAL_OPORTUNIDAD}% solo se utiliza para destacar desvíos prioritarios.`, true));
+  children.push(tarjeta(`Las diferencias positivas indican importes por encima del promedio de su universo de comparación. Las diferencias negativas indican importes por debajo del promedio. Una diferencia igual a 0% está alineada con el promedio. El umbral de  solo se utiliza para destacar desvíos prioritarios.`, true));
 
   // 5. Gráficos
   children.push(tituloSeccion("5. Lectura económica del universo"));
@@ -339,7 +339,7 @@ export async function generarInformeWord(
   // 6. Familia x cliente
   children.push(new PageBreak());
   children.push(tituloSeccion("6. Detalle por familia y cliente"));
-  children.push(parrafoSuave("Referencia = promedio de los clientes seleccionados dentro de la familia. La diferencia y el porcentaje se calculan contra esa referencia."));
+  children.push(parrafoSuave("Promedio = promedio de los clientes seleccionados dentro de la familia. La diferencia y el porcentaje se calculan contra esa referencia."));
 
   if (!analisis.gruposFamiliaCliente.length) {
     children.push(parrafoSuave("No hay comparaciones de familia por cliente disponibles."));
@@ -400,7 +400,7 @@ export async function generarInformeWord(
   children.push(tituloSeccion("8. Oportunidades comerciales"));
   children.push(
     tarjeta(
-      `Por encima del promedio: ${altas.length} caso(s). Por debajo del promedio: ${bajas.length} caso(s). El sistema permite revisar todos los desvíos; las diferencias de ±${UMBRAL_OPORTUNIDAD}% o más se destacan como señales comerciales prioritarias.`,
+      `Por encima del promedio: ${altas.length} caso(s). Por debajo del promedio: ${bajas.length} caso(s). El sistema permite revisar todos los desvíos; las diferencias de  o más se destacan como señales comerciales prioritarias.`,
       true,
     ),
   );
