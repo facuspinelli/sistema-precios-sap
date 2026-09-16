@@ -477,26 +477,27 @@ export function realizarAnalisis(resultados: ResultadoValidacion[]): ResultadoCo
       const porcentaje = promedioFamilia ? porcentajeVs(c.importePromedio, promedioFamilia) : 0;
 
       gruposFamiliaCliente.push({
-        familia: familia.familia,
-        cliente: c.cliente,
-        registros: c.registros,
-        materiales: c.materiales,
-        importeTotal: c.importeTotal,
-        importePromedio: c.importePromedio,
-        promedioUniverso: promedioFamilia,
-        diferenciaVsPromedio: diferencia,
-        porcentajeVsPromedio: porcentaje,
-        vecesVsPromedio: promedioFamilia ? c.importePromedio / promedioFamilia : 0,
-        referenciaPromedioSeleccionado: promedioFamilia,
-        diferenciaVsPromedioSeleccionado: diferencia,
-        porcentajeVsPromedioSeleccionado: porcentaje,
-        vecesVsPromedioSeleccionado: promedioFamilia ? c.importePromedio / promedioFamilia : 0,
-        clasificacion: clasificar(c.importePromedio, promedioFamilia),
-        posicion: index + 1,
-        // Se conserva el campo por compatibilidad. La referencia de familia no depende de
-        // materiales compartidos en esta nueva lógica.
-        materialesComparables: c.materiales,
-      });
+  familia: familia.familia,
+  cliente: c.cliente,
+  registros: c.registros,
+  materiales: c.materiales,
+  importeTotal: c.importeTotal,
+  importePromedio: c.importePromedio,
+  promedioUniverso: promedioFamilia,
+  promedioFamilia: promedioFamilia,
+  diferenciaVsPromedio: diferencia,
+  porcentajeVsPromedio: porcentaje,
+  vecesVsPromedio: promedioFamilia ? c.importePromedio / promedioFamilia : 0,
+  referenciaPromedioSeleccionado: promedioFamilia,
+  diferenciaVsPromedioSeleccionado: diferencia,
+  porcentajeVsPromedioSeleccionado: porcentaje,
+  vecesVsPromedioSeleccionado: promedioFamilia ? c.importePromedio / promedioFamilia : 0,
+  clasificacion: clasificar(c.importePromedio, promedioFamilia),
+  posicion: index + 1,
+  // Se conserva el campo por compatibilidad. La referencia de familia no depende de
+  // materiales compartidos en esta nueva lógica.
+  materialesComparables: c.materiales,
+});
     });
   }
 
