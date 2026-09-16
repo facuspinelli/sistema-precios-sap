@@ -85,6 +85,7 @@ export type ComparacionFamiliaCliente = {
   materiales: number;
   importeTotal: number;
   importePromedio: number;
+  promedioUniverso: number;
 
   // Se conservan para compatibilidad y ahora representan el promedio de la familia.
   promedioFamilia: number;
