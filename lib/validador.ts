@@ -1,4 +1,4 @@
-import { enriquecerMaterial, normalizar, numero, reglasCliente, texto, valorCampo } from "./maestros";
+import { Maestros, MAESTROS_INICIALES, enriquecerMaterial, normalizar, numero, reglasCliente, texto, valorCampo } from "./maestros";
 
 export type Estado = "OK" | "ALERTA" | "ERROR";
 
@@ -38,10 +38,10 @@ function esPB00(datos: Record<string, unknown>): boolean {
   return Object.values(datos).some((v) => normalizar(v) === "PB00");
 }
 
-function filaBase(datos: Record<string, unknown>, numeroFila: number): ResultadoValidacion {
+function filaBase(datos: Record<string, unknown>, numeroFila: number, maestros: Maestros): ResultadoValidacion {
   const observaciones: string[] = [];
   const cliente = valorCampo(datos, ["Cliente", "Cl.sap", "Cod SAP", "COD SAP", "Código SAP", "Codigo SAP"]);
-  const reglas = reglasCliente(cliente);
+  const reglas = reglasCliente(cliente, maestros);
   const clienteEncontrado = reglas.length > 0;
   const razonSocial = clienteEncontrado ? texto(reglas[0].razon_social) : "";
 
@@ -54,7 +54,7 @@ function filaBase(datos: Record<string, unknown>, numeroFila: number): Resultado
   if (multiplesCondiciones) observaciones.push(`El cliente ${cliente} tiene múltiples condiciones en la base: ${condicionesEncontradas.join(", ")}.`);
 
   const material = valorCampo(datos, ["Material", "Material PROD", "Material producto", "Código material", "Codigo material"]);
-  const mat = enriquecerMaterial(material);
+  const mat = enriquecerMaterial(material, maestros);
   if (!mat.encontrado && material) observaciones.push(`El material ${material} no existe en el Nomenclador SAP.`);
 
   const importe = numero(valorCampo(datos, ["Importe"]));
@@ -113,7 +113,7 @@ function filaBase(datos: Record<string, unknown>, numeroFila: number): Resultado
   };
 }
 
-export function validarExcel(filas: Record<string, unknown>[]): ResultadoValidacion[] {
+export function validarExcel(filas: Record<string, unknown>[], maestros: Maestros = MAESTROS_INICIALES): ResultadoValidacion[] {
   const resultados: ResultadoValidacion[] = [];
 
   for (let i = 0; i < filas.length; i++) {
@@ -134,7 +134,7 @@ export function validarExcel(filas: Record<string, unknown>[]): ResultadoValidac
       continue;
     }
 
-    resultados.push(filaBase(fila, numeroFila));
+    resultados.push(filaBase(fila, numeroFila, maestros));
   }
 
   const porCliente = new Map<string, ResultadoValidacion[]>();
@@ -145,7 +145,7 @@ export function validarExcel(filas: Record<string, unknown>[]): ResultadoValidac
 
   for (const [cliente, filasCliente] of Array.from(porCliente.entries())) {
     const condicionesExcel = Array.from(new Set(filasCliente.map((r) => normalizar(r.condicionExcel)).filter(Boolean)));
-    const reglas = reglasCliente(cliente);
+    const reglas = reglasCliente(cliente, maestros);
     const esperadas = Array.from(new Set(reglas.map((r: any) => normalizar(r.condicion_impositiva)).filter(Boolean)));
     const esperada = esperadas.length === 1 ? esperadas[0] : "";
     const multiples = condicionesExcel.length > 1;
